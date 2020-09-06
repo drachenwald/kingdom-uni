@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  ui:
+    image: sca/university
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - .:/build
+    stdin_open: true
+    command: "yarn start"
+
