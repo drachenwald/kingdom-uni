@@ -9,5 +9,5 @@ services:
     volumes:
       - .:/build
     stdin_open: true
-    command: "yarn start"
+    command: ash -c "yarn && yarn start"
 
