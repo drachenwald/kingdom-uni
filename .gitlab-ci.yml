@@ -1,0 +1,18 @@
+image: node:alpine
+
+cache:
+  paths:
+  - node_modules/
+  - .cache/
+
+pages:
+  script:
+  - yarn
+  - PUBLIC_URL="https://sca-drachenwald.gitlab.io/university/" yarn build
+  - mv build public
+  artifacts:
+    expire_in: 1 hour
+    paths:
+    - public
+  only:
+  - staging
