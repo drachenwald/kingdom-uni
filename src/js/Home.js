@@ -39,17 +39,17 @@ const Home = (props) => {
                 We will have classes throughout the weekend, as well as in the days
                 leading up to the event.
               </Card.Text>
-              <Button variant="primary"><b>Register to attend</b></Button>
+              <Button variant="primary" href="#/register"><b>Register to attend</b></Button>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={food} />
             <Card.Body>
-              <Card.Title>Meeting</Card.Title>
+              <Card.Title>Schedule</Card.Title>
               <Card.Text>
-                It might be virtual, but that doesn't stop us having a feast.
+                A full weekend of classes, plus extra events throughout the week.
               </Card.Text>
-              <Button variant="primary"><b>Drachenwald website</b></Button>
+              <Button variant="primary" href="#/schedule"><b>See the schedule</b></Button>
             </Card.Body>
           </Card>
         </CardDeck>

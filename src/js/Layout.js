@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import heraldry from '../images/uni-chancellor-badge.svg';
+import drachenwald_arms from '../images/drachenwald-arms.svg';
 
 const Layout = (props) => {
   return (
@@ -34,6 +35,14 @@ const Layout = (props) => {
 
     <Navbar expand="lg" bg="drachenwald" variant="dark">
       <Container>
+        <Navbar.Brand href="https://drachenwald.sca.org/">
+          <img
+            alt=""
+            src={drachenwald_arms}
+            width="90"
+            className="d-inline-block align-middle"
+          />
+        </Navbar.Brand>
         <Navbar.Text>
           <br />
           <p>
