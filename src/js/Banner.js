@@ -8,7 +8,7 @@ const Banner = (props) => {
       <div className="banner">
         <Row className="h-100">
           <Col sm className="my-auto">
-            <Container>
+            <Container className="py-5">
               <h1>{props.headline}</h1>
               {
                 props.subhead
