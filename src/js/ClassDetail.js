@@ -70,7 +70,7 @@ const ClassDetail = (props) => {
             null
         }
 
-        <p><Button variant="primary" href="#/schedule"><b>Return to schedule</b></Button></p>Are ye For the
+        <p><Button variant="primary" href="#/schedule"><b>Return to schedule</b></Button></p>
 
       </Container>
     </>
