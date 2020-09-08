@@ -42,9 +42,9 @@ const ScheduleRow = (props) => {
                 <b>{today}</b>
               </Col>
             </Row>
-            <Row className="d-none d-md-flex">
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">{props.eventTimezone.shortname}</Col>
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">{props.shortTimezone}</Col>
+            <Row className="d-none d-md-flex text-center">
+              <Col xs={6} md={1} className="bg-drachenwald text-gold">Event&nbsp;time ({props.eventTimezone.shortname})</Col>
+              <Col xs={6} md={1} className="bg-drachenwald text-gold">Your&nbsp;time ({props.shortTimezone})</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 1</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 2</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 3</Col>
@@ -56,11 +56,11 @@ const ScheduleRow = (props) => {
           null
       }
       <Row>
-        <Col xs={6} md={1} className="bg-drachenwald text-gold">
+        <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }
           <span className="d-inline d-md-none">{props.eventTimezone.nickname}</span>
         </Col>
-        <Col xs={6} md={1} className="bg-drachenwald text-gold">
+        <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }
           <span className="d-inline d-md-none">{props.timezone}</span>
         </Col>
