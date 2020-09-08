@@ -58,11 +58,11 @@ const ScheduleRow = (props) => {
       <Row>
         <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }
-          <span className="d-inline d-md-none">{props.eventTimezone.nickname}</span>
+          <span className="d-inline d-md-none"> {props.eventTimezone.nickname}</span>
         </Col>
         <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }
-          <span className="d-inline d-md-none">{props.timezone}</span>
+          <span className="d-inline d-md-none"> {props.timezone}</span>
         </Col>
 
         {classCells}

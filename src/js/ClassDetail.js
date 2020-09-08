@@ -62,7 +62,15 @@ const ClassDetail = (props) => {
           {thisClass.desc}
         </p>
 
-        <Button variant="primary" href="#/schedule"><b>Return to schedule</b></Button>
+        {
+          thisClass.handouts
+          ?
+            <p><Button variant="primary" href={thisClass.handouts}><b>View class materials</b></Button></p>
+          :
+            null
+        }
+
+        <p><Button variant="primary" href="#/schedule"><b>Return to schedule</b></Button></p>Are ye For the
 
       </Container>
     </>
