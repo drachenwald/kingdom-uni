@@ -2,9 +2,27 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 
 import Banner from './Banner';
+// eslint-disable-next-line
 import ScheduleRow from './ScheduleRow';
 
 const Schedule = (props) => {
+
+  return (
+    <>
+      <Banner
+        headline="Schedule"
+      />
+
+      <Container>
+
+        <h3>Coming soon. Watch this space...</h3>
+
+      </Container>
+      
+    </>
+  );
+
+  /*
 
   const shortTZ = () => {
     // Short timezone (e.g. GMT) from https://gist.github.com/redoPop/3915761
@@ -34,23 +52,6 @@ const Schedule = (props) => {
   const shortTimezone = shortTZ();
 
   let lastTimestamp = new Date(1);
-
-  return (
-    <>
-      <Banner
-        headline="Schedule"
-      />
-
-      <Container>
-
-        <h3>Coming soon. Watch this space...</h3>
-
-      </Container>
-      
-    </>
-  );
-
-  /*
 
   return (
     <>
