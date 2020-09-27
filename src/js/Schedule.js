@@ -33,9 +33,24 @@ const Schedule = (props) => {
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const shortTimezone = shortTZ();
 
-
   let lastTimestamp = new Date(1);
 
+  return (
+    <>
+      <Banner
+        headline="Schedule"
+      />
+
+      <Container>
+
+        <h3>Coming soon. Watch this space...</h3>
+
+      </Container>
+      
+    </>
+  );
+
+  /*
 
   return (
     <>
@@ -70,6 +85,8 @@ const Schedule = (props) => {
       
     </>
   );
+
+  */
 
 }
 
