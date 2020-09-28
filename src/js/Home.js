@@ -14,8 +14,8 @@ const Home = (props) => {
       <Banner
         headline="Drachenwald Kingdom University"
         subhead="27-29 November 2020."
-        button_label="See the schedule..."
-        button_url="#/schedule"
+        button_label="Register to attend..."
+        button_url="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"
       />
 
       <Container>

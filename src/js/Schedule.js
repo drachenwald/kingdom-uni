@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
 
 import Banner from './Banner';
 // eslint-disable-next-line
@@ -13,15 +12,7 @@ const Schedule = (props) => {
         headline="Schedule"
       />
 
-      <Container>
-        <Row>
-          <Col></Col>
-          <Col xs="auto">
-            <h3>Coming soon. Watch this space...</h3>
-          </Col>
-          <Col></Col>
-        </Row>
-      </Container>
+      <h3 className="text-center">Coming soon. Watch this space...</h3>
       
     </>
   );

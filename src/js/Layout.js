@@ -27,8 +27,11 @@ const Layout = (props) => {
               <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSe1V1eQp2wWw2ivh6UKOOCZRJiJISMZx89w4cdw1y_8z0WZlQ/viewform" className="mx-2">Submit a class</Nav.Link>
               <Nav.Link href="#/schedule" className="mx-2">See the schedule</Nav.Link>
             </Nav>
-            <Nav className="bg-drachenwald text-gold text-left">
-              <Ticker {...props} />
+            <Nav>
+              <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
+              <Nav.Item className="bg-drachenwald text-gold text-left">
+                <Ticker {...props} />
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
