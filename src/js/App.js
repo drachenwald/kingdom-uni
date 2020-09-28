@@ -97,7 +97,7 @@ function App() {
 
   return (
     <>
-      <Layout>
+      <Layout eventTimezone={eventTimezone}>
         <Router>
           <Switch>
             <Route exact

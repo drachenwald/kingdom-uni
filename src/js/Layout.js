@@ -4,6 +4,8 @@ import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import heraldry from '../images/uni-chancellor-badge.svg';
 import drachenwald_arms from '../images/drachenwald-arms.svg';
 
+import Ticker from './Ticker';
+
 const Layout = (props) => {
   return (
     <>
@@ -24,6 +26,9 @@ const Layout = (props) => {
               <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform" className="mx-2">Register to attend</Nav.Link>
               <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSe1V1eQp2wWw2ivh6UKOOCZRJiJISMZx89w4cdw1y_8z0WZlQ/viewform" className="mx-2">Submit a class</Nav.Link>
               <Nav.Link href="#/schedule" className="mx-2">See the schedule</Nav.Link>
+            </Nav>
+            <Nav className="bg-drachenwald text-gold text-left">
+              <Ticker {...props} />
             </Nav>
           </Navbar.Collapse>
         </Container>

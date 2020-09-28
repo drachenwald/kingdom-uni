@@ -7,19 +7,6 @@ import ScheduleRow from './ScheduleRow';
 
 const Schedule = (props) => {
 
-  const [ now, setNow ] = useState( new Date() );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setNow( new Date() );
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Long timezone (e.g. Europe/Dublin)
-
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
   return (
     <>
       <Banner
@@ -27,22 +14,6 @@ const Schedule = (props) => {
       />
 
       <Container>
-
-        <Row>
-          <Col></Col>
-          <Col xs="auto" className="bg-drachenwald text-gold text-center">
-            It is now<br />
-            { now.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
-            {' '}{timezone}
-            <br />
-            { now.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
-            {' '}{props.eventTimezone.nickname}
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col><br /></Col>
-        </Row>
         <Row>
           <Col></Col>
           <Col xs="auto">
@@ -50,15 +21,16 @@ const Schedule = (props) => {
           </Col>
           <Col></Col>
         </Row>
-
-        
-
       </Container>
       
     </>
   );
 
   /*
+
+  // Long timezone (e.g. Europe/Dublin)
+
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const shortTZ = () => {
     // Short timezone (e.g. GMT) from https://gist.github.com/redoPop/3915761
