@@ -1,11 +1,24 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import Banner from './Banner';
 // eslint-disable-next-line
 import ScheduleRow from './ScheduleRow';
 
 const Schedule = (props) => {
+
+  const [ now, setNow ] = useState( new Date() );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNow( new Date() );
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Long timezone (e.g. Europe/Dublin)
+
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   return (
     <>
@@ -15,7 +28,30 @@ const Schedule = (props) => {
 
       <Container>
 
-        <h3>Coming soon. Watch this space...</h3>
+        <Row>
+          <Col></Col>
+          <Col xs="auto" className="bg-drachenwald text-gold text-center">
+            It is now<br />
+            { now.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
+            {' '}{timezone}
+            <br />
+            { now.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
+            {' '}{props.eventTimezone.nickname}
+          </Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col><br /></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+          <Col xs="auto">
+            <h3>Coming soon. Watch this space...</h3>
+          </Col>
+          <Col></Col>
+        </Row>
+
+        
 
       </Container>
       
@@ -46,9 +82,6 @@ const Schedule = (props) => {
   
   }
 
-  // Long timezone (e.g. Europe/Dublin)
-
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const shortTimezone = shortTZ();
 
   let lastTimestamp = new Date(1);
