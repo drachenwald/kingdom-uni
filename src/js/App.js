@@ -14,9 +14,9 @@ function App() {
   // Configure these details for this event
 
   const eventTimezone = {
-    'offset': '+02:00',
-    'shortname': 'EET',
-    'longname': 'Europe/Helsinki',
+    'offset': '+01:00',
+    'shortname': 'CET',
+    'longname': 'Europe/Stockholm',
     'nickname': 'Drachenwald time',
   }
 
@@ -97,7 +97,7 @@ function App() {
 
   return (
     <>
-      <Layout>
+      <Layout eventTimezone={eventTimezone}>
         <Router>
           <Switch>
             <Route exact

@@ -14,8 +14,8 @@ const Home = (props) => {
       <Banner
         headline="Drachenwald Kingdom University"
         subhead="27-29 November 2020."
-        button_label="See the schedule..."
-        button_url="#/schedule"
+        button_label="Register to attend..."
+        button_url="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"
       />
 
       <Container>
@@ -28,7 +28,7 @@ const Home = (props) => {
               <Card.Text>
                 Would you like to teach your skills? We would love to hear from you.
               </Card.Text>
-              <Button variant="primary" href="#/submitclass"><b>Submit a class</b></Button>
+              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe1V1eQp2wWw2ivh6UKOOCZRJiJISMZx89w4cdw1y_8z0WZlQ/viewform"><b>Submit a class</b></Button>
             </Card.Body>
           </Card>
           <Card>
@@ -39,17 +39,17 @@ const Home = (props) => {
                 We will have classes throughout the weekend, as well as in the days
                 leading up to the event.
               </Card.Text>
-              <Button variant="primary"><b>Register to attend</b></Button>
+              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"><b>Register to attend</b></Button>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={food} />
             <Card.Body>
-              <Card.Title>Meeting</Card.Title>
+              <Card.Title>Schedule</Card.Title>
               <Card.Text>
-                It might be virtual, but that doesn't stop us having a feast.
+                A full weekend of classes, plus extra events throughout the week.
               </Card.Text>
-              <Button variant="primary"><b>Drachenwald website</b></Button>
+              <Button variant="primary" href="#/schedule"><b>See the schedule</b></Button>
             </Card.Body>
           </Card>
         </CardDeck>
@@ -62,33 +62,30 @@ const Home = (props) => {
 
           <Col>
             <p>
-            Greetings Drachenwald and guests from around the Knowne World,
+              Greetings Drachenwald and guests from around the Knowne World! 
             </p>
             <p>
-              We  invite you to attend Drachenwald’s Kingdom University in the Year of the Long Reign. This year due to the plague being visited upon us, we are going Virtual.  What this means for the University this year is that classes will be held via online platforms – Zoom and Discord. We will also have a social space on Discord for the event. 
+              We invite you to attend Drachenwald’s Kingdom University in the Year of the Long Reign. This year due to the plague being visited upon us, we are going virtual - this year classes will be held via Zoom and Discord. We will also have a social space on Discord for the duration of the event. 
+              The event itself will be mainly held between Friday 27th and Sunday 29th November. We also hope to take advantage of the situation and intend to have some lead-in classes in the weeks prior. 
             </p>
             <p>
-              The event itself will be mainly held between Friday 27th and Sunday 29th November. Due to nature of this year we are taking advantage and intend to have some lead in classes in the weeks prior. 
+              Come join us for the many classes on interesting subjects, Royal courts, feast, bardic circles, and general merriment and companionship. 
             </p>
             <p>
-              Come join us for the many classes in different fields (link to class schedule/descriptions), court (link to court times and which courts), feast (link to menu and proposed time), bardic circle (link to???) and general merriment and companionship. 
+              We will be running this event on Central Drachenwald time (CET), but the times on the schedule will be linked to your own time zone thanks to the wonderful website team so you know exactly when things are happening.
             </p>
             <p>
-              We will be running this event on Central Drachenwald time (CET) to take advantage of the ethereal nature of the event. However the times on the schedule will be linked to your own time zone thanks to the wonderful website team.  (Have I interpreted the timezone alignment wrong?)
+              This is an excellent opportunity for you to teach, no matter where you’re from. Anyone can submit a class proposal! We also hope to record as many of the classes as possible during the event, and make them available later. 
             </p>
             <p>
-              If you have a class proposal please fill out this form (link to class proposals).
+              We’re looking forward to seeing as many of you as possible at University!
             </p>
             <p>
-              We intend to record as many of the classes as possible over the event. 
+              Guy De Dinan - Event Steward<br />
+              Catriona of the Ravens - University Chancellor
             </p>
             <p>
-              Looking forward to see as many of you as possible at University.
-            </p>
-            <p>
-              Guy (Role)<br />
-              Caitriona - University Chancellor<br />
-              Yannick (Role)
+              Please direct any questions to <a href="mailto:DWKUChancellor@gmail.com">DWKUChancellor@gmail.com</a>
             </p>
           </Col>
 
