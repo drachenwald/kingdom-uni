@@ -22,7 +22,7 @@ function App() {
 
   const roomnames = [ 'one', 'two', 'three', 'four', 'five' ]
 
-  const scheduleUrl = 'https://gender.pm/unitsv';
+  const scheduleUrl = 'https://scripts.drachenwald.sca.org/calendar/data/ku-schedule.tsv';
 
   // Code starts here
 
@@ -97,8 +97,8 @@ function App() {
 
   return (
     <>
-      <Layout eventTimezone={eventTimezone}>
-        <Router>
+      <Router>
+        <Layout eventTimezone={eventTimezone}>
           <Switch>
             <Route exact
               path="/"
@@ -142,8 +142,8 @@ function App() {
             />
 
           </Switch>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
     </>
   );
 }

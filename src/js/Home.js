@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, CardDeck, Card } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
 
@@ -49,7 +50,7 @@ const Home = (props) => {
               <Card.Text>
                 A full weekend of classes, plus extra events throughout the week.
               </Card.Text>
-              <Button variant="primary" href="#/schedule"><b>See the schedule</b></Button>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
             </Card.Body>
           </Card>
         </CardDeck>
