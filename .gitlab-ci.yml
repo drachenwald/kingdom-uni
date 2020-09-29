@@ -16,3 +16,49 @@ pages:
     - public
   only:
   - staging
+
+deploy:
+  environment: production
+  script:
+  ##
+  ## Install ssh-agent if not already installed, it is required by Docker.
+  ## (change apt-get to yum if you use an RPM-based image)
+  ##
+  - apt-get -o dir::cache::archives=".cache/apt-cache" install openssh-client rsync -y
+  ##
+  ## Run ssh-agent (inside the build environment)
+  ##
+  - eval $(ssh-agent -s)
+  ##
+  ##
+  ## Create the SSH directory and give it the right permissions
+  ##
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  ##
+  ## Optionally, if you will be using any Git commands, set the user name and
+  ## and email.
+  ##
+  #- git config --global user.email "user@example.com"
+  #- git config --global user.name "User name"
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## We're using tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
+  - echo "${OVH_PRIVATE}" | tr -d '\r' | ssh-add - > /dev/null
+  - yarn
+  - PUBLIC_URL="https://ku.drachenwald.sca.org/" yarn build
+  - rm -rf public
+  - mv build public
+  - rsync -rvzc --delete -e 'ssh -p 22' public/ $WEBHOST_OVH:www/
+
+  artifacts:
+    expire_in: 1 hour
+    paths:
+    - public
+  only:
+  - master
+  
