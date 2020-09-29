@@ -24,7 +24,7 @@ deploy:
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
   ##
-  - apt-get -o dir::cache::archives=".cache/apt-cache" install openssh-client rsync -y
+  - apk --update add openssh-client rsync
   ##
   ## Run ssh-agent (inside the build environment)
   ##
