@@ -50,7 +50,7 @@ deploy:
   ##
   - echo "${OVH_PRIVATE}" | tr -d '\r' | ssh-add - > /dev/null
   - yarn
-  - PUBLIC_URL="https://ku.drachenwald.sca.org/" yarn build
+  - yarn build
   - rsync -rvzc --delete -e 'ssh -p 22' build/ $WEBHOST_OVH:ku/
 
   artifacts:
