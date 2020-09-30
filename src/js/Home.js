@@ -86,7 +86,7 @@ const Home = (props) => {
               Catriona of the Ravens - University Chancellor
             </p>
             <p>
-              Please direct any questions to <a href="mailto:DWKUChancellor@gmail.com">DWKUChancellor@gmail.com</a>
+              Please direct any questions to <a href="mailto:university@drachenwald.sca.org">university@drachenwald.sca.org</a>
             </p>
           </Col>
 
