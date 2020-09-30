@@ -7,7 +7,7 @@ cache:
 pages:
   script:
   - yarn
-  - PUBLIC_URL="https://sca-drachenwald.gitlab.io/university/" yarn build
+  - yarn build
   - rm -rf public
   - mv build public
   artifacts:
