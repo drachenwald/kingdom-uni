@@ -26,15 +26,11 @@ const ClassDetail = (props) => {
     );
   }
 
-  console.log( props.schedule );
-
   const classes = props.schedule.reduce( ( acc, slot ) => (
     acc.concat( slot.classes.filter( c => c.title ) )
   ), [] ).sort( ( a, b ) => {
     return ( a.title.toLowerCase() < b.title.toLowerCase() ) ? -1 : ( a.title.toLowerCase() > b.title.toLowerCase() ) ? 1 : 0
   });
-
-  console.log( classes );
 
   //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
   const thisClass = classes.find( x => x.slug === class_slug )

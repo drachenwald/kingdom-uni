@@ -21,7 +21,7 @@ const ClassList = (props) => {
       <Container>
         { classes.map( ( item , i ) => (
             <div key={i}>
-              <Link to={'classes/' + item.slug}>{item.title} - <span className="text-muted">{item.teacher}</span></Link>
+              <Link to={'classes/' + item.slug}>{item.title}<span className="text-muted"> - {item.teacher}</span></Link>
             </div>
 
           ))
