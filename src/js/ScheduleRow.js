@@ -43,8 +43,8 @@ const ScheduleRow = (props) => {
               </Col>
             </Row>
             <Row className="d-none d-md-flex text-center">
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">Event&nbsp;time ({props.eventTimezone.shortname})</Col>
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">Your&nbsp;time ({props.shortTimezone})</Col>
+              <Col xs={6} md={1} className="bg-drachenwald text-gold">Event&nbsp;time</Col>
+              <Col xs={6} md={1} className="bg-drachenwald text-gold">Your&nbsp;time</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 1</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 2</Col>
               <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 3</Col>

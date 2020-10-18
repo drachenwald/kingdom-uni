@@ -1,16 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Spinner, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
 
 const ClassDetail = (props) => {
 
-  const { yyyymmdd, hhmm, slug } = useParams();
-  const class_slug = `${yyyymmdd}/${hhmm}/${slug}`;
+  const { teacher, slug } = useParams();
+  const class_slug = `${teacher}/${slug}`;
 
-  const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
-  const classDate = new Date( classDatestamp )
+  // const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
+  // const classDate = new Date( classDatestamp )
 
   if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
     return (
@@ -25,10 +26,41 @@ const ClassDetail = (props) => {
     );
   }
 
-  const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
-  const thisClass = row.classes.find( x => x.slug === class_slug )
+  const classes = props.schedule.reduce( ( acc, slot ) => (
+    acc.concat( slot.classes.filter( c => c.title ) )
+  ), [] ).sort( ( a, b ) => {
+    return ( a.title.toLowerCase() < b.title.toLowerCase() ) ? -1 : ( a.title.toLowerCase() > b.title.toLowerCase() ) ? 1 : 0
+  });
 
+  //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
+  const thisClass = classes.find( x => x.slug === class_slug )
+
+  const classtime = null;
+
+  /*
   const usertimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const classtime = (
+    <p>
+
+    { row.when.toLocaleDateString( 'en-GB', { weekday: 'short', day: 'numeric', month: 'short' } ) }
+    {' '}at{' '}
+    <b>{ row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }</b> {usertimezone}
+    {
+      usertimezone !== props.eventTimezone.longname
+      ?
+        <>
+          <br />
+          { row.when.toLocaleDateString( 'en-GB', { timeZone: props.eventTimezone.shortname, weekday: 'short', day: 'numeric', month: 'short' } ) }
+          {' '}at{' '}
+          <b>{ row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }</b> {props.eventTimezone.longname}
+        </>
+      :
+        null
+    }
+    
+    </p>
+  )
+  */
 
   return (
     <>
@@ -39,25 +71,9 @@ const ClassDetail = (props) => {
         <h3>
           Hosted by {thisClass.teacher}
         </h3>
-        <p>
 
-        { row.when.toLocaleDateString( 'en-GB', { weekday: 'short', day: 'numeric', month: 'short' } ) }
-        {' '}at{' '}
-        <b>{ row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }</b> {usertimezone}
-        {
-          usertimezone !== props.eventTimezone.longname
-          ?
-            <>
-              <br />
-              { row.when.toLocaleDateString( 'en-GB', { timeZone: props.eventTimezone.shortname, weekday: 'short', day: 'numeric', month: 'short' } ) }
-              {' '}at{' '}
-              <b>{ row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }</b> {props.eventTimezone.longname}
-            </>
-          :
-            null
-        }
-        
-        </p>
+        {classtime}
+
         <p>
           {thisClass.desc}
         </p>
@@ -70,7 +86,7 @@ const ClassDetail = (props) => {
             null
         }
 
-        <p><Button variant="primary" href="#/schedule"><b>Return to schedule</b></Button></p>
+        <p><LinkContainer to="/classlist"><Button variant="primary"><b>Return to class list</b></Button></LinkContainer></p>
 
       </Container>
     </>

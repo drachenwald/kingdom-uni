@@ -8,6 +8,7 @@ import SubmitClass from './SubmitClass';
 import Schedule from './Schedule';
 import NotFound from './NotFound';
 import ClassDetail from './ClassDetail';
+import ClassList from './ClassList';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     'offset': '+01:00',
     'shortname': 'CET',
     'longname': 'Europe/Stockholm',
-    'nickname': 'Drachenwald time',
+    'nickname': 'Event time',
   }
 
   const roomnames = [ 'one', 'two', 'three', 'four', 'five' ]
@@ -45,13 +46,14 @@ function App() {
       .replace(/-+$/, '') // Trim - from end of text
   }
 
-  const slugify_class = ( datestamp, title ) => {
+  const slugify_class = ( teacher, title ) => {
     
-    const yyyymmdd = datestamp.toLocaleDateString( 'sv-SE', { timeZone: eventTimezone.shortname, year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g,'-');
-    const hhmm = datestamp.toLocaleTimeString( 'sv-SE', { timeZone: eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }).replace(/:/,'');
+    //const yyyymmdd = datestamp.toLocaleDateString( 'sv-SE', { timeZone: eventTimezone.shortname, year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g,'-');
+    //const hhmm = datestamp.toLocaleTimeString( 'sv-SE', { timeZone: eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }).replace(/:/,'');
+    const teacherslug = slugify( teacher );
     const titleslug = slugify( title );
 
-    return `${yyyymmdd}/${hhmm}/${titleslug}`;
+    return `${teacherslug}/${titleslug}`;
   }
 
 
@@ -67,7 +69,7 @@ function App() {
 
       const thisclass = {
         ...row,
-        slug: slugify_class( classDatestamp, row.title )
+        slug: slugify_class( row.teacher, row.title )
       }
   
       if ( index === -1 ) {
@@ -125,8 +127,18 @@ function App() {
             />
 
             <Route
-              path="/classes/:yyyymmdd/:hhmm/:slug"
+              path="/classes/:teacher/:slug"
               render={(props) => <ClassDetail
+                                    {...props}
+                                    schedule={schedule}
+                                    eventTimezone={eventTimezone}
+                                    roomnames={roomnames}
+                                  />}
+            />
+
+            <Route
+              path="/classlist"
+              render={(props) => <ClassList
                                     {...props}
                                     schedule={schedule}
                                     eventTimezone={eventTimezone}
