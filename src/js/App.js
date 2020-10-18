@@ -8,6 +8,7 @@ import SubmitClass from './SubmitClass';
 import Schedule from './Schedule';
 import NotFound from './NotFound';
 import ClassDetail from './ClassDetail';
+import ClassList from './ClassList';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     'offset': '+01:00',
     'shortname': 'CET',
     'longname': 'Europe/Stockholm',
-    'nickname': 'Drachenwald time',
+    'nickname': 'Event time',
   }
 
   const roomnames = [ 'one', 'two', 'three', 'four', 'five' ]
@@ -127,6 +128,16 @@ function App() {
             <Route
               path="/classes/:yyyymmdd/:hhmm/:slug"
               render={(props) => <ClassDetail
+                                    {...props}
+                                    schedule={schedule}
+                                    eventTimezone={eventTimezone}
+                                    roomnames={roomnames}
+                                  />}
+            />
+
+            <Route
+              path="/classlist"
+              render={(props) => <ClassList
                                     {...props}
                                     schedule={schedule}
                                     eventTimezone={eventTimezone}
