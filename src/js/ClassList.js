@@ -1,10 +1,23 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import Banner from './Banner';
 
 const ClassList = (props) => {
+
+  if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
+    return (
+      <>
+        <Banner
+          headline="Loading..."
+        />
+        <Container>
+          <Spinner animation="border" />
+        </Container>
+      </>
+    );
+  }
 
   const classes = props.schedule.reduce( ( acc, slot ) => (
     acc.concat( slot.classes.filter( c => c.title ) )
