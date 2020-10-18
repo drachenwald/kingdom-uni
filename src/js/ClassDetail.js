@@ -7,11 +7,11 @@ import Banner from './Banner';
 
 const ClassDetail = (props) => {
 
-  const { yyyymmdd, hhmm, slug } = useParams();
-  const class_slug = `${yyyymmdd}/${hhmm}/${slug}`;
+  const { teacher, slug } = useParams();
+  const class_slug = `${teacher}/${slug}`;
 
-  const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
-  const classDate = new Date( classDatestamp )
+  // const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
+  // const classDate = new Date( classDatestamp )
 
   if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
     return (
@@ -26,8 +26,18 @@ const ClassDetail = (props) => {
     );
   }
 
-  const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
-  const thisClass = row.classes.find( x => x.slug === class_slug )
+  console.log( props.schedule );
+
+  const classes = props.schedule.reduce( ( acc, slot ) => (
+    acc.concat( slot.classes.filter( c => c.title ) )
+  ), [] ).sort( ( a, b ) => {
+    return ( a.title.toLowerCase() < b.title.toLowerCase() ) ? -1 : ( a.title.toLowerCase() > b.title.toLowerCase() ) ? 1 : 0
+  });
+
+  console.log( classes );
+
+  //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
+  const thisClass = classes.find( x => x.slug === class_slug )
 
   const classtime = null;
 

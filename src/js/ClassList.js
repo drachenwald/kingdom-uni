@@ -12,8 +12,6 @@ const ClassList = (props) => {
     return ( a.title.toLowerCase() < b.title.toLowerCase() ) ? -1 : ( a.title.toLowerCase() > b.title.toLowerCase() ) ? 1 : 0
   });
 
-  console.log( classes );
-
   return (
     <>
       <Banner
