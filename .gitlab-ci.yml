@@ -6,7 +6,7 @@ cache:
 
 pages:
   script:
-  - apk --update add python2
+  - apk --update add python2 python make g++
   - yarn
   - yarn build
   - rm -rf public
