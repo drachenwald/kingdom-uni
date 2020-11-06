@@ -44,6 +44,10 @@ $navbar-dark-toggler-border-color:  rgba($gold, .1) !default;
   }
 }
 
+svg {
+  width: 1.5rem;
+}
+
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import CategoryIcon from './CategoryIcon';
 
 
 const ScheduleRow = (props) => {
@@ -14,21 +15,42 @@ const ScheduleRow = (props) => {
   const classCells = props.roomnames.map( roomname => {
     const item = props.row.classes.find( x => x.room === roomname );
     return (
-      item
-      ?
-        <Col key={`class-${props.row.when.valueOf}-${roomname}`}
-          xs={12} md={2}
-          className="border-left bg-light text-dark" as={Link} to={'classes/' + item.slug}
-        >
-        {item.title}
-        </Col>
-      :
-        <Col key={`class-${props.row.when.valueOf}-${roomname}`}
-          xs={12} md={2}
-          className="border-left bg-light text-dark"
-        >
-        {' '}
-        </Col>
+      <Row key={`row-${props.row.when.valueOf}-${roomname}`}>
+        { item
+          ?
+            <>
+              <Col md={2} className='bg-drachenwald text-gold d-none d-md-block'>
+                {roomname}
+              </Col>
+              <Col
+                xs={12} md={7}
+                className="border-left bg-light text-dark border" as={Link} to={'classes/' + item.slug}
+              >
+                {item.title}
+                <span className="d-none d-sm-inline text-muted"><i> - {item.teacher}</i></span>
+              </Col>
+              <Col md={2} className='d-none d-md-block text-center'>
+                {item.duration}
+              </Col>
+              <Col md={1} className='d-none d-md-block text-center'>
+                { item.category
+                  ?
+                    <CategoryIcon category={item.category} />
+                  :
+                    null
+                }
+              </Col>
+            </>
+          :
+            <Col key={`class-${props.row.when.valueOf}-${roomname}`}
+              xs={12}
+              className="border-left bg-light text-dark"
+            >
+              {' '}
+            </Col>
+        }
+        
+      </Row>
     )
   });
 
@@ -42,31 +64,23 @@ const ScheduleRow = (props) => {
                 <b>{today}</b>
               </Col>
             </Row>
-            <Row className="d-none d-md-flex text-center">
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">Event&nbsp;time</Col>
-              <Col xs={6} md={1} className="bg-drachenwald text-gold">Your&nbsp;time</Col>
-              <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 1</Col>
-              <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 2</Col>
-              <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 3</Col>
-              <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 4</Col>
-              <Col xs={12} md={2} className="bg-drachenwald text-gold">Room 5</Col>
-            </Row>
           </>
         :
           null
       }
       <Row>
-        <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
+        <Col xs={6} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }
-          <span className="d-inline d-md-none"> {props.eventTimezone.nickname}</span>
+          {' '}{props.eventTimezone.nickname}
         </Col>
-        <Col xs={6} md={1} className="bg-drachenwald text-gold text-center">
+        <Col xs={6} className="bg-drachenwald text-gold text-center">
           { props.row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }
-          <span className="d-inline d-md-none"> {props.timezone}</span>
+          {' '}{props.timezone}
         </Col>
-
-        {classCells}
       </Row>
+
+      {classCells}
+
     </>
   );
 }
