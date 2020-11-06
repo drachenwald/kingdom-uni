@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import { Container, Spinner } from 'react-bootstrap';
 
 import Banner from './Banner';
