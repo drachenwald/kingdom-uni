@@ -6,6 +6,7 @@ cache:
 
 pages:
   script:
+  - apk --update add python2
   - yarn
   - yarn build
   - rm -rf public
@@ -24,7 +25,7 @@ deploy:
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
   ##
-  - apk --update add openssh-client rsync
+  - apk --update add openssh-client rsync python2
   ##
   ## Run ssh-agent (inside the build environment)
   ##
