@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
 import Banner from './Banner';
 // eslint-disable-next-line
@@ -18,6 +18,20 @@ const Schedule = (props) => {
     </>
   );
 /*
+
+  if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
+    return (
+      <>
+        <Banner
+          headline="Loading..."
+        />
+        <Container>
+          <Spinner animation="border" />
+        </Container>
+      </>
+    );
+  }
+
   // Long timezone (e.g. Europe/Dublin)
 
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -59,8 +73,8 @@ const Schedule = (props) => {
       
     </>
   );
-
 */
+
 
 }
 

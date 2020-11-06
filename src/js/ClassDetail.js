@@ -4,6 +4,7 @@ import { Container, Spinner, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
+import CategoryIcon from './CategoryIcon';
 
 const ClassDetail = (props) => {
 
@@ -73,6 +74,11 @@ const ClassDetail = (props) => {
         </h3>
 
         {classtime}
+
+        <p>
+          <CategoryIcon category={thisClass.category} /> {thisClass.category}<br />
+          Duration {thisClass.duration}
+        </p>
 
         <p>
           {thisClass.desc}

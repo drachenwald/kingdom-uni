@@ -21,7 +21,7 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'one', 'two', 'three', 'four', 'five' ]
+  const roomnames = [ 'Cambridge', 'Leiden', 'Bologna', 'Al-Azhar', 'Sorbonne', 'Urbino', 'Tartu', 'Oxford' ]
 
   const scheduleUrl = 'https://scripts.drachenwald.sca.org/calendar/data/ku-schedule.tsv';
 
