@@ -1,6 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Icon from '@mdi/react';
+import { mdiRecordRec } from '@mdi/js';
+
 import CategoryIcon from './CategoryIcon';
 
 
@@ -14,6 +17,11 @@ const ScheduleRow = (props) => {
 
   const classCells = props.roomnames.map( roomname => {
     const item = props.row.classes.find( x => x.room === roomname );
+
+    if ( item && item.title === '' ) {
+      return null
+    }
+
     return (
       <Row key={`row-${props.row.when.valueOf}-${roomname}`}>
         { item
@@ -22,20 +30,42 @@ const ScheduleRow = (props) => {
               <Col md={2} className='bg-drachenwald text-gold d-none d-md-block'>
                 {roomname}
               </Col>
-              <Col
-                xs={12} md={7}
-                className="border-left bg-light text-dark border" as={Link} to={'classes/' + item.slug}
-              >
-                {item.title}
-                <span className="d-none d-sm-inline text-muted"><i> - {item.teacher}</i></span>
-              </Col>
+
+              { item.teacher
+                ?
+                  <Col
+                    xs={12} md={7}
+                    className="border-left bg-light text-dark border" as={Link} to={'classes/' + item.slug}
+                  >
+                    {item.title}
+                    <span className="d-none d-sm-inline text-muted"><i> - {item.teacher}</i></span>
+                  </Col>
+                :
+                  <Col
+                    xs={12} md={7}
+                    className="border-left bg-light text-dark border"
+                  >
+                    {item.title}
+                  </Col>
+              }
+              
               <Col md={2} className='d-none d-md-block text-center'>
                 {item.duration}
               </Col>
               <Col md={1} className='d-none d-md-block text-center'>
                 { item.category
                   ?
+                    <>
                     <CategoryIcon category={item.category} />
+                      { item.record === 'yes'
+                        ?
+                          <>
+                            {' '}<Icon path={mdiRecordRec} color="#660000" title="This session may be recorded" />
+                          </>
+                        :
+                        null
+                      }
+                    </>
                   :
                     null
                 }

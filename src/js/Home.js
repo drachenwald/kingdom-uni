@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, CardDeck, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, CardDeck, Card, Alert } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
@@ -25,17 +25,17 @@ const Home = (props) => {
           <Card>
             <Card.Img variant="top" src={textile} />
             <Card.Body>
-              <Card.Title>Teaching</Card.Title>
+              <Card.Title>Schedule</Card.Title>
               <Card.Text>
-                Would you like to teach your skills? We would love to hear from you.
+                Including evening sessions in the week leading up to the event.
               </Card.Text>
-              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe1V1eQp2wWw2ivh6UKOOCZRJiJISMZx89w4cdw1y_8z0WZlQ/viewform"><b>Submit a class</b></Button>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={tapestry} />
             <Card.Body>
-              <Card.Title>Learning</Card.Title>
+              <Card.Title>Register</Card.Title>
               <Card.Text>
                 We will have classes throughout the weekend, as well as in the days
                 leading up to the event.
@@ -62,6 +62,12 @@ const Home = (props) => {
           </Col>
 
           <Col>
+            <Alert variant="danger">
+              <h2>Registration closing</h2>
+              <p>Registration will close on <b>Saturday 21st November.</b> Make sure you're
+              booked to attend before then.</p>
+              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"><b>Register to attend</b></Button>
+            </Alert>
             <p>
               Greetings Drachenwald and guests from around the Knowne World! 
             </p>

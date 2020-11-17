@@ -8,6 +8,7 @@ import ScheduleRow from './ScheduleRow';
 
 const Schedule = (props) => {
 
+  /*
   return (
     <>
       <Banner
@@ -18,7 +19,7 @@ const Schedule = (props) => {
       
     </>
   );
-/*
+  */
 
   if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
     return (
@@ -74,7 +75,6 @@ const Schedule = (props) => {
       
     </>
   );
-*/
 
 
 }
