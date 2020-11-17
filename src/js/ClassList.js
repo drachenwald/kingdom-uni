@@ -52,7 +52,12 @@ const ClassList = (props) => {
         { classes.map( ( item , i ) => (
             <div key={i}>
               <CategoryIcon category={item.category} />{' '}
-              <Link to={'classes/' + item.slug}>{item.title}<span className="text-muted"> - {item.teacher}</span></Link>
+              { item.teacher
+                ?
+                  <Link to={'classes/' + item.slug}>{item.title}<span className="text-muted"> - {item.teacher}</span></Link>
+                :
+                  <span>{item.title}</span>
+              }
             </div>
 
           ))

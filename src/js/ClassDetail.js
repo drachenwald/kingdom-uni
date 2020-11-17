@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Container, Spinner, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Icon from '@mdi/react';
-import { mdiRecordRec } from '@mdi/js';
+import { mdiRecordRec, mdiClockTimeThreeOutline } from '@mdi/js';
 
 import Banner from './Banner';
 import CategoryIcon from './CategoryIcon';
@@ -83,20 +83,20 @@ const ClassDetail = (props) => {
         {classtime}
 
         <p>
+          {desc}
+        </p>
+
+        <p>
           <CategoryIcon category={thisClass.category} /> {thisClass.category}<br />
+          <Icon path={mdiClockTimeThreeOutline} title="Duration" /> Duration {thisClass.duration}
           { thisClass.record === 'yes'
             ?
               <>
-                <Icon path={mdiRecordRec} color="#660000" title="This session may be recorded" />This session may be recorded<br />
+                <br /><Icon path={mdiRecordRec} color="#660000" title="This session may be recorded" />This session may be recorded. If you would prefer not to be recorded, please disable your camera and microphone for this session.
               </>
             :
             null
           }
-          Duration {thisClass.duration}
-        </p>
-
-        <p>
-          {desc}
         </p>
 
         {
@@ -107,7 +107,28 @@ const ClassDetail = (props) => {
             null
         }
 
-        <p><LinkContainer to="/classlist"><Button variant="primary"><b>Return to class list</b></Button></LinkContainer></p>
+        <p>
+          { thisClass.zoom
+            ?
+              <Button variant="primary" href={thisClass.zoom}><b>Join the {thisClass.room} room</b></Button>
+            :
+              <>
+                This class will take place in the <b>{thisClass.room}</b> room.
+              </>
+          }
+        </p>
+
+        <p>
+          <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>{' '}
+          <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
+        </p>
+
+        { thisClass.trailer
+          ?
+            <p><br /><a href={thisClass.trailer}>Trailer</a></p>
+          :
+            null
+        }
 
       </Container>
     </>
