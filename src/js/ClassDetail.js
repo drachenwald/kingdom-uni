@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Spinner, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Icon from '@mdi/react';
+import { mdiRecordRec, mdiClockTimeThreeOutline } from '@mdi/js';
 
 import Banner from './Banner';
 import CategoryIcon from './CategoryIcon';
@@ -10,6 +12,8 @@ const ClassDetail = (props) => {
 
   const { teacher, slug } = useParams();
   const class_slug = `${teacher}/${slug}`;
+
+  console.log(props);
 
   // const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
   // const classDate = new Date( classDatestamp )
@@ -36,24 +40,27 @@ const ClassDetail = (props) => {
   //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
   const thisClass = classes.find( x => x.slug === class_slug )
 
-  const classtime = null;
+  console.log( thisClass );
+  const desc = thisClass.desc.split('\n').reduce((total, line, index) => [total, <br key={index}/>, line]);
+  console.log( desc );
 
-  /*
   const usertimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const classDate = new Date( thisClass.when + props.eventTimezone.offset )
+
   const classtime = (
     <p>
 
-    { row.when.toLocaleDateString( 'en-GB', { weekday: 'short', day: 'numeric', month: 'short' } ) }
+    { classDate.toLocaleDateString( 'en-GB', { weekday: 'short', day: 'numeric', month: 'short' } ) }
     {' '}at{' '}
-    <b>{ row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }</b> {usertimezone}
+    <b>{ classDate.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }</b> {usertimezone}
     {
       usertimezone !== props.eventTimezone.longname
       ?
         <>
           <br />
-          { row.when.toLocaleDateString( 'en-GB', { timeZone: props.eventTimezone.shortname, weekday: 'short', day: 'numeric', month: 'short' } ) }
+          { classDate.toLocaleDateString( 'en-GB', { timeZone: props.eventTimezone.shortname, weekday: 'short', day: 'numeric', month: 'short' } ) }
           {' '}at{' '}
-          <b>{ row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }</b> {props.eventTimezone.longname}
+          <b>{ classDate.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }</b> {props.eventTimezone.longname}
         </>
       :
         null
@@ -61,7 +68,7 @@ const ClassDetail = (props) => {
     
     </p>
   )
-  */
+  
 
   return (
     <>
@@ -76,12 +83,20 @@ const ClassDetail = (props) => {
         {classtime}
 
         <p>
-          <CategoryIcon category={thisClass.category} /> {thisClass.category}<br />
-          Duration {thisClass.duration}
+          {desc}
         </p>
 
         <p>
-          {thisClass.desc}
+          <CategoryIcon category={thisClass.category} /> {thisClass.category}<br />
+          <Icon path={mdiClockTimeThreeOutline} title="Duration" /> Duration {thisClass.duration}
+          { thisClass.record === 'yes'
+            ?
+              <>
+                <br /><Icon path={mdiRecordRec} color="#660000" title="This session may be recorded" />This session may be recorded. If you would prefer not to be recorded, please disable your camera and microphone for this session.
+              </>
+            :
+            null
+          }
         </p>
 
         {
@@ -92,7 +107,28 @@ const ClassDetail = (props) => {
             null
         }
 
-        <p><LinkContainer to="/classlist"><Button variant="primary"><b>Return to class list</b></Button></LinkContainer></p>
+        <p>
+          { thisClass.zoom
+            ?
+              <Button variant="primary" href={thisClass.zoom}><b>Join the {thisClass.room} room</b></Button>
+            :
+              <>
+                This class will take place in the <b>{thisClass.room}</b> room.
+              </>
+          }
+        </p>
+
+        <p>
+          <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>{' '}
+          <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
+        </p>
+
+        { thisClass.trailer
+          ?
+            <p><br /><a href={thisClass.trailer}>Trailer</a></p>
+          :
+            null
+        }
 
       </Container>
     </>

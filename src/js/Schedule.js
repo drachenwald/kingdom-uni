@@ -1,6 +1,8 @@
 import React from 'react';
 // eslint-disable-next-line
-import { Container, Spinner } from 'react-bootstrap';
+import { Container, Spinner, Alert } from 'react-bootstrap';
+import Icon from '@mdi/react';
+import { mdiAlert } from '@mdi/js';
 
 import Banner from './Banner';
 // eslint-disable-next-line
@@ -8,6 +10,7 @@ import ScheduleRow from './ScheduleRow';
 
 const Schedule = (props) => {
 
+  /*
   return (
     <>
       <Banner
@@ -18,7 +21,7 @@ const Schedule = (props) => {
       
     </>
   );
-/*
+  */
 
   if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
     return (
@@ -49,6 +52,11 @@ const Schedule = (props) => {
 
       <Container>
 
+        <Alert variant="warning">
+        <Icon path={mdiAlert} />{' '}
+          This schedule is subject to change
+        </Alert>
+
         { 
           props.schedule.map( ( row, i ) => {
 
@@ -74,7 +82,6 @@ const Schedule = (props) => {
       
     </>
   );
-*/
 
 
 }
