@@ -13,8 +13,6 @@ const ClassDetail = (props) => {
   const { teacher, slug } = useParams();
   const class_slug = `${teacher}/${slug}`;
 
-  console.log(props);
-
   // const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
   // const classDate = new Date( classDatestamp )
 
@@ -40,9 +38,7 @@ const ClassDetail = (props) => {
   //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
   const thisClass = classes.find( x => x.slug === class_slug )
 
-  console.log( thisClass );
   const desc = thisClass.desc.split('\n').reduce((total, line, index) => [total, <br key={index}/>, line]);
-  console.log( desc );
 
   const usertimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const classDate = new Date( thisClass.when + props.eventTimezone.offset )
