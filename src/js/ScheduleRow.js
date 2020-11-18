@@ -99,11 +99,11 @@ const ScheduleRow = (props) => {
           null
       }
       <Row>
-        <Col xs={6} className="bg-drachenwald text-gold text-center">
+        <Col xs={6} className="bg-drachenwald text-gold text-right">
+          {props.eventTimezone.nickname}{' '}
           { props.row.when.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }) }
-          {' '}{props.eventTimezone.nickname}
         </Col>
-        <Col xs={6} className="bg-drachenwald text-gold text-center">
+        <Col xs={6} className="bg-drachenwald text-gold text-left">
           { props.row.when.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit' }) }
           {' '}{props.timezone}
         </Col>
