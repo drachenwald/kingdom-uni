@@ -4,11 +4,11 @@ import { readRemoteFile } from 'react-papaparse';
 
 import Layout from './Layout';
 import Home from './Home';
-import SubmitClass from './SubmitClass';
 import Schedule from './Schedule';
 import NotFound from './NotFound';
 import ClassDetail from './ClassDetail';
 import ClassList from './ClassList';
+import Housekeeping from './Housekeeping';
 
 function App() {
 
@@ -110,8 +110,8 @@ function App() {
             />
 
             <Route
-              path="/submitclass"
-              render={(props) => <SubmitClass
+              path="/housekeeping"
+              render={(props) => <Housekeeping
                                     {...props}
                                   />}
             />

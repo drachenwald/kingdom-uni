@@ -27,6 +27,7 @@ const Layout = (props) => {
           <Navbar.Collapse>
             <Nav className="ml-auto">
               <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform" className="mx-2">Register to attend</Nav.Link>
+              <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
               <LinkContainer to="/classlist"><Nav.Link className="mx-2">Class list</Nav.Link></LinkContainer>
               <LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
             </Nav>
