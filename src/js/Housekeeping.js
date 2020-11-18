@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
 
@@ -46,6 +47,10 @@ const Housekeeping = (props) => {
 
             <p>Breaches and disruptive behaviour will see offenders removed and the incident reported. We really hope this won’t be necessary, and that it offers the highest hospitality this fair Kingdom can provide online. So, please, maintain honour, respect and decorum and relax into a long weekend of learning and enlightenment!</p>
             <p>All the best from your organising team!</p>
+
+            <p>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
+            </p>
           </Col>
 
           <Col xs={0} md={1} lg={2}>
