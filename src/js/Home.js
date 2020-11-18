@@ -37,8 +37,7 @@ const Home = (props) => {
             <Card.Body>
               <Card.Title>Register</Card.Title>
               <Card.Text>
-                We will have classes throughout the weekend, as well as in the days
-                leading up to the event.
+                Closing soon - make sure to register in good time.
               </Card.Text>
               <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"><b>Register to attend</b></Button>
             </Card.Body>
@@ -46,11 +45,11 @@ const Home = (props) => {
           <Card>
             <Card.Img variant="top" src={food} />
             <Card.Body>
-              <Card.Title>Class list</Card.Title>
+              <Card.Title>Housekeeping and Code of Conduct</Card.Title>
               <Card.Text>
-                A full weekend of classes, plus extra events throughout the week.
+                Welcome to Kingdom University.
               </Card.Text>
-              <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
+              <LinkContainer to="/housekeeping"><Button variant="primary"><b>Housekeeping</b></Button></LinkContainer>
             </Card.Body>
           </Card>
         </CardDeck>
