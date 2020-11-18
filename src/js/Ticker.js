@@ -14,11 +14,12 @@ const Ticker = (props) => {
 
   return (
     <>
-      { now.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
-      {' '}Your time
+      Your time{' '}
+      <span style={{'fontFamily': 'Open Sans'}}>{ now.toLocaleTimeString( 'en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) }</span>
+      
       <br />
-      { now.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit', second: '2-digit' }) }
-      {' '}Event time
+      Event time{' '}
+      <span style={{'fontFamily': 'Open Sans'}}>{ now.toLocaleTimeString( 'en-GB', { timeZone: props.eventTimezone.shortname, hour: '2-digit', minute: '2-digit', second: '2-digit' }) }</span>
     </>
   );
 
