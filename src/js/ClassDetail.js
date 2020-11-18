@@ -41,7 +41,9 @@ const ClassDetail = (props) => {
   const desc = thisClass.desc.split('\n').reduce((total, line, index) => [total, <br key={index}/>, line]);
 
   const usertimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const classDate = new Date( thisClass.when + props.eventTimezone.offset )
+
+  const classDateString = thisClass.when.replace(" ", "T") + props.eventTimezone.offset
+  const classDate = new Date( classDateString )
 
   const classtime = (
     <p>
