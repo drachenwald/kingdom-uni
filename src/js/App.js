@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { readRemoteFile } from 'react-papaparse';
+// import { readRemoteFile } from 'react-papaparse';
 
 import Layout from './Layout';
 import Home from './Home';
@@ -23,7 +23,7 @@ function App() {
 
   const roomnames = [ 'Cambridge', 'Leiden', 'Bologna', 'Al-Azhar', 'Sorbonne', 'Urbino', 'Tartu', 'Oxford' ]
 
-  const scheduleUrl = 'https://scripts.drachenwald.sca.org/calendar/data/ku-schedule.tsv';
+  const scheduleUrl = 'https://scripts.drachenwald.sca.org/json/ku.json';
 
   // Code starts here
 
@@ -60,15 +60,15 @@ function App() {
   const assembleSchedule = ( data ) => {
     const schedule = data.reduce( (acc, row) => {
 
-      const [ classDate, classTime ] = row.when.split(" ",2);
-      const classHHMM = ( "0" + classTime ).slice(-5);
+      const classDT = row.when.replace('Z','') + eventTimezone.offset;
 
-      const classDatestamp = new Date( `${classDate}T${classHHMM}${eventTimezone.offset}` );
+      const classDatestamp = new Date( classDT );
 
       const index = acc.findIndex( x => x.when.valueOf() === classDatestamp.valueOf() );
 
       const thisclass = {
         ...row,
+        when: classDT,
         slug: slugify_class( row.teacher, row.title )
       }
   
@@ -77,7 +77,6 @@ function App() {
       } else {
         acc[index]['classes'].push( thisclass );
       }
-  
       return acc;
   
     }, [] );
@@ -86,14 +85,9 @@ function App() {
   };
 
   useEffect( () => {
-    readRemoteFile(scheduleUrl, {
-      download: true,
-      header: true,
-      delimiter: '\t',
-      complete: (results) => {
-        setSchedule( assembleSchedule( results.data ) );
-      }
-    });
+    fetch(scheduleUrl)
+      .then(response => response.json())
+      .then(data => setSchedule( assembleSchedule( data )))
     // eslint-disable-next-line
   }, []);
 

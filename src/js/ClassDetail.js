@@ -42,7 +42,7 @@ const ClassDetail = (props) => {
 
   const usertimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-  const classDateString = thisClass.when.replace(" ", "T") + props.eventTimezone.offset
+  const classDateString = thisClass.when
   const classDate = new Date( classDateString )
 
   const classtime = (
