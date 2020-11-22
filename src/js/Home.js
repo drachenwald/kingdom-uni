@@ -14,9 +14,7 @@ const Home = (props) => {
     <>
       <Banner
         headline="Drachenwald Kingdom University"
-        subhead="27-29 November 2020."
-        button_label="Register to attend..."
-        button_url="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"
+        subhead="27-29 November 2020"
       />
 
       <Container>
@@ -35,21 +33,21 @@ const Home = (props) => {
           <Card>
             <Card.Img variant="top" src={tapestry} />
             <Card.Body>
-              <Card.Title>Class list</Card.Title>
-              <Card.Text>
-                Almost a hundred classes from dozens of teachers around the SCA.
-              </Card.Text>
-              <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src={food} />
-            <Card.Body>
               <Card.Title>Housekeeping and Code of Conduct</Card.Title>
               <Card.Text>
                 You are welcome at Kingdom University.
               </Card.Text>
               <LinkContainer to="/housekeeping"><Button variant="primary"><b>Housekeeping</b></Button></LinkContainer>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src={food} />
+            <Card.Body>
+            <Card.Title>Class list</Card.Title>
+              <Card.Text>
+                Almost a hundred classes from dozens of teachers around the SCA.
+              </Card.Text>
+              <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
             </Card.Body>
           </Card>
         </CardDeck>
