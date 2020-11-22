@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { Container, Spinner, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Icon from '@mdi/react';
@@ -13,8 +13,7 @@ const ClassDetail = (props) => {
   const { teacher, slug } = useParams();
   const class_slug = `${teacher}/${slug}`;
 
-  // const classDatestamp = `${yyyymmdd}T${hhmm.substring(0,2)}:${hhmm.substring(2,4)}${props.eventTimezone.offset}`;
-  // const classDate = new Date( classDatestamp )
+  const location = useLocation();
 
   if ( !Array.isArray(props.schedule) || !props.schedule.length ) {
     return (
@@ -35,8 +34,30 @@ const ClassDetail = (props) => {
     return ( a.title.toLowerCase() < b.title.toLowerCase() ) ? -1 : ( a.title.toLowerCase() > b.title.toLowerCase() ) ? 1 : 0
   });
 
-  //const row = props.schedule.find( x => x.when.valueOf() === classDate.valueOf() );
   const thisClass = classes.find( x => x.slug === class_slug )
+
+  if ( !thisClass ) {
+
+    return (
+      <>
+      <Banner
+        headline="Class not found"
+      />
+      <Container>
+        <p>
+          There's no class at {location.pathname}.
+        </p>
+
+        <p>
+          Check the schedule in case this class has been moved, or cancelled.
+        </p>
+
+        <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
+
+      </Container>
+    </>
+    )
+  }
 
   const desc = thisClass.desc.split('\n').reduce((total, line, index) => [total, <br key={index}/>, line]);
 
