@@ -27,7 +27,7 @@ const Home = (props) => {
             <Card.Body>
               <Card.Title>Schedule</Card.Title>
               <Card.Text>
-                Including evening sessions in the week leading up to the event.
+                Plus evening sessions in the week leading up to the event.
               </Card.Text>
               <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
             </Card.Body>
@@ -35,11 +35,11 @@ const Home = (props) => {
           <Card>
             <Card.Img variant="top" src={tapestry} />
             <Card.Body>
-              <Card.Title>Register</Card.Title>
+              <Card.Title>Class list</Card.Title>
               <Card.Text>
-                Closing soon - make sure to register in good time.
+                Almost a hundred classes from dozens of teachers around the SCA.
               </Card.Text>
-              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"><b>Register to attend</b></Button>
+              <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
@@ -47,7 +47,7 @@ const Home = (props) => {
             <Card.Body>
               <Card.Title>Housekeeping and Code of Conduct</Card.Title>
               <Card.Text>
-                Welcome to Kingdom University.
+                You are welcome at Kingdom University.
               </Card.Text>
               <LinkContainer to="/housekeeping"><Button variant="primary"><b>Housekeeping</b></Button></LinkContainer>
             </Card.Body>
@@ -61,11 +61,9 @@ const Home = (props) => {
           </Col>
 
           <Col>
-            <Alert variant="danger">
-              <h2>Registration closing</h2>
-              <p>Registration will close on <b>Saturday 21st November.</b> Make sure you're
-              booked to attend before then.</p>
-              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSek2Bwp79IqYuzWxuoclC0ZXn7j8Sxez_T733i00zLnYaFVgQ/viewform"><b>Register to attend</b></Button>
+            <Alert variant="warning">
+              <h2>Registration has closed</h2>
+              <p>Registration closed on Saturday 21st November. Check your email for connection details.</p>
             </Alert>
             <p>
               Greetings Drachenwald and guests from around the Knowne World! 
