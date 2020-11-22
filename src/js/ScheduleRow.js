@@ -28,7 +28,12 @@ const ScheduleRow = (props) => {
           ?
             <>
               <Col md={2} className='bg-drachenwald text-gold d-none d-md-block'>
-                {roomname}
+                {item.youtube
+                 ?
+                  <span>Prerecorded</span>
+                 :
+                  <span>{roomname}</span>
+                }
               </Col>
 
               { item.teacher
@@ -89,8 +94,13 @@ const ScheduleRow = (props) => {
       { today !== lastDay
         ?
           <>
+            <Row>
+              <Col>
+                <br />
+              </Col>
+            </Row>
             <Row xs={1}>
-              <Col className="bg-drachenwald text-gold text-center">
+              <Col className="text-center">
                 <b>{today}</b>
               </Col>
             </Row>

@@ -3,10 +3,12 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Container, Spinner, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Icon from '@mdi/react';
-import { mdiRecordRec, mdiClockTimeThreeOutline, mdiMonitorCellphone } from '@mdi/js';
+import { mdiRecordRec, mdiClockTimeThreeOutline } from '@mdi/js';
 
 import Banner from './Banner';
 import CategoryIcon from './CategoryIcon';
+import Youtubelink from './Youtubelink';
+import Zoomlink from './Zoomlink';
 
 const ClassDetail = (props) => {
 
@@ -127,18 +129,14 @@ const ClassDetail = (props) => {
         }
 
         <p>
-          { thisClass.zoom
+          { thisClass.youtube
             ?
-              <>
-                <Button variant="primary" href={thisClass.zoom}><Icon path={mdiMonitorCellphone} title="Connect to the Zoom call" /><b>{' '}Join the {thisClass.room} room using Zoom</b></Button><br />
-                Check your email for password information
-              </>
+              <Youtubelink thisClass={thisClass} />
             :
-              <>
-                This class will take place in the <b>{thisClass.room}</b> room.
-              </>
+              <Zoomlink thisClass={thisClass} />
           }
         </p>
+
 
         <p>
           <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>{' '}
