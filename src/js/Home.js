@@ -63,6 +63,7 @@ const Home = (props) => {
               <h2>Registration has closed</h2>
               <p>Registration closed on Saturday 21st November. Check your email for connection details.</p>
             </Alert>
+            <br />
             <p>
               Greetings Drachenwald and guests from around the Knowne World! 
             </p>
@@ -89,6 +90,41 @@ const Home = (props) => {
             <p>
               Please direct any questions to <a href="mailto:university@drachenwald.sca.org">university@drachenwald.sca.org</a>
             </p>
+          </Col>
+
+          <Col xs={0} sm={1} xl={2}>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col xs={0} sm={1} xl={2}>
+          </Col>
+
+          <Col>
+            <br />
+            <Alert variant="secondary">
+              <h3>Event staff</h3>
+              <p>
+                TH Lord Guy de Dinan - Event Steward<br />
+                Viscountess Caitriona of the Ravens - Kingdom Chancellor
+              </p>
+            
+              <p>
+                Web Team:<br />
+                TH Lady Marcella di Cavallino<br />
+                Lady Yda Van Boulogne<br />
+                TH Lady Sela de la Rosa
+              </p>
+
+              <p>
+                Lady Shirin Duxt Feroz - Queen of Discord<br />
+                Viscount Yannick of Normandy - Zoom Tech<br />
+                Henric vanden Casteele - Social Media<br />
+                Lord Aodhan dha Cheist - Games and Gaming<br />
+                Lady Amphelise de Wodeham - Feast cook
+              </p>
+
+            </Alert>
           </Col>
 
           <Col xs={0} sm={1} xl={2}>
