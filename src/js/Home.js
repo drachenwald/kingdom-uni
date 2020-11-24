@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Banner from './Banner';
 
 import textile from '../images/cards/textile.jpg';
-import tapestry from '../images/cards/tapestry.jpg';
+import gaita from '../images/cards/gaita.jpg';
 import food from '../images/cards/food.jpg';
 
 const Home = (props) => {
@@ -31,23 +31,23 @@ const Home = (props) => {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src={tapestry} />
+            <Card.Img variant="top" src={gaita} />
             <Card.Body>
-              <Card.Title>Housekeeping and Code of Conduct</Card.Title>
+              <Card.Title>Ball and Live Music</Card.Title>
               <Card.Text>
-                You are welcome at Kingdom University.
+                Mistress Judith will lead us in the dance to LIVE music from Gaita.
               </Card.Text>
-              <LinkContainer to="/housekeeping"><Button variant="primary"><b>Housekeeping</b></Button></LinkContainer>
+              <LinkContainer to="/classes/kingdom-of-drachenwald/ball"><Button variant="primary"><b>More info about the ball</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={food} />
             <Card.Body>
-            <Card.Title>Class list</Card.Title>
+            <Card.Title>Feast</Card.Title>
               <Card.Text>
-                Almost a hundred classes from dozens of teachers around the SCA.
+                Cook along with Amphelise's recipes, then join us over dinner.
               </Card.Text>
-              <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
+              <LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
             </Card.Body>
           </Card>
         </CardDeck>
