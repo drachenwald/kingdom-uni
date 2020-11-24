@@ -17,7 +17,7 @@ const Layout = (props) => {
               <img
                 alt=""
                 src={heraldry}
-                width="100"
+                width="95"
                 className="d-inline-block align-middle"
               />{' '}
               Kingdom University

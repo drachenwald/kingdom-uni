@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Spinner } from 'react-bootstrap';
+import { Container, Spinner, Row, Col } from 'react-bootstrap';
 
 import Banner from './Banner';
 import ScheduleRow from './ScheduleRow';
@@ -34,6 +34,17 @@ const Schedule = (props) => {
       />
 
       <Container>
+
+        <Row>
+          <Col xs={12} className="text-center">
+            Event time is <b>Central European Time</b>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="text-center">
+            Your timezone is <b>{timezone}</b>
+          </Col>
+        </Row>
 
         { 
           props.schedule.map( ( row, i ) => {

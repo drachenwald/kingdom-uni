@@ -61,7 +61,8 @@ const Home = (props) => {
           <Col>
             <Alert variant="warning">
               <h2>Registration has closed</h2>
-              <p>Registration closed on Saturday 21st November. Check your email for connection details.</p>
+              <p>Registration closed on Saturday 21st November. If you registered, you should have an email
+                from Sunday 22nd with connection details and other important information.</p>
             </Alert>
             <br />
             <p>
