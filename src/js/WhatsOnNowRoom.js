@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const WhatsOnNowRoom = (props) => {
 
-  const nowish = new Date( props.now.getTime() + 7*60*60*1000 );
+  const nowish = new Date( props.now.getTime() + 5*1000 );
 
   let onNow;
 
@@ -33,11 +33,13 @@ const WhatsOnNowRoom = (props) => {
             </span>
             {onNow.title}<br />
             <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
+            <br /><br />
           </>
         :
           <>
             <b>{props.room} room</b><br />
             <span className="text-muted">Not currently active</span>
+            <br /><br />
           </>
       }
     </>

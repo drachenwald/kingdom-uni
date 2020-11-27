@@ -8,10 +8,10 @@ const WhatsOnNow = (props) => {
   const [ now, setNow ] = useState( new Date() );
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const whatsOnInterval = setInterval(() => {
       setNow( new Date() );
     }, 60000);
-    return () => clearInterval(interval);
+    return () => clearInterval(whatsOnInterval);
   }, []);
 
   return (
