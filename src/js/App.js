@@ -21,13 +21,15 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'Cambridge', 'Leiden', 'Bologna', 'Al-Azhar', 'Sorbonne', 'Urbino', 'Tartu', 'Oxford' ]
+  const roomnames = [ 'Cambridge', 'Leiden', 'Bologna', 'Al-Azhar', 'Sorbonne', 'Urbino', 'Tartu', 'Oxford',
+                      'SpareA', 'SpareB', 'SpareC', 'SpareD' ]
 
   const scheduleUrl = 'https://scripts.drachenwald.sca.org/json/ku.json';
 
   // Code starts here
 
   const [ schedule, setSchedule ] = useState([]);
+  const [ schedByRoom, setSchedByRoom ] = useState({});
 
   // From https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
 
@@ -84,10 +86,31 @@ function App() {
     return schedule;
   };
 
+  const assembleSchedByRoom = ( data ) => {
+
+    let assembly = {};
+
+    for ( let i = 0 ; i < roomnames.length ; i++ ) {
+      assembly[roomnames[i]] = data.filter( row => row.room === roomnames[i] )
+        .map( row => (
+          { title: row.title,
+            start: new Date( row.when.replace('Z','') + eventTimezone.offset ),
+            end: new Date( row['end time'].replace('Z','') + eventTimezone.offset ),
+            slug: slugify_class( row.teacher, row.title )
+          }
+        ))
+    }
+
+    return assembly;
+  }
+
   useEffect( () => {
     fetch(scheduleUrl)
       .then(response => response.json())
-      .then(data => setSchedule( assembleSchedule( data )))
+      .then(data => {
+        setSchedByRoom( assembleSchedByRoom( data ) )
+        return setSchedule( assembleSchedule( data ))
+      })
     // eslint-disable-next-line
   }, []);
 
@@ -100,6 +123,8 @@ function App() {
               path="/"
               render={(props) => <Home
                                     {...props}
+                                    schedByRoom={schedByRoom}
+                                    roomnames={roomnames}
                                   />}
             />
 
