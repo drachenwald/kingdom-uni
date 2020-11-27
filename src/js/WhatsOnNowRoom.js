@@ -30,7 +30,7 @@ const WhatsOnNowRoom = (props) => {
           </small>
           <br />
         </span>
-        {onNow.title}<br />
+        {onNow.title}<br /><br />
         <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
         <br /><br />
       </>
@@ -44,19 +44,20 @@ const WhatsOnNowRoom = (props) => {
   return (
     <>
       <b>{props.room} room</b><br />
-      Not currently active
-      <br /><br />
 
       { onNext
         ?
           <>
             <span className="text-muted">
-              Coming up at {onNext.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}:<br />
+              <small>Coming up at {onNext.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}</small><br />
               {onNext.title}
             </span>
+            <br /><br />
           </>
         :
-        null
+          <>
+            <span className="text-muted">Room has closed</span>
+          </>
       }
     </>
 
