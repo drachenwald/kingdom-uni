@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, CardDeck, Card, Alert } from 'react-bootst
 import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
+import WhatsOnNow from './WhatsOnNow';
 
 import textile from '../images/cards/textile.jpg';
 import gaita from '../images/cards/gaita.jpg';
@@ -54,48 +55,9 @@ const Home = (props) => {
 
         <br />
 
-        <Row>
-          <Col xs={0} sm={1} xl={2}>
-          </Col>
+        <WhatsOnNow schedByRoom={props.schedByRoom} roomnames={props.roomnames} />
 
-          <Col>
-            <Alert variant="warning">
-              <h2>Registration has closed</h2>
-              <p>Registration closed on Saturday 21st November. If you registered, you should have an email
-                from Sunday 22nd with connection details and other important information.</p>
-            </Alert>
-            <br />
-            <p>
-              Greetings Drachenwald and guests from around the Knowne World! 
-            </p>
-            <p>
-              We invite you to attend Drachenwald’s Kingdom University in the Year of the Long Reign. This year due to the plague being visited upon us, we are going virtual - this year classes will be held via Zoom and Discord. We will also have a social space on Discord for the duration of the event. 
-              The event itself will be mainly held between Friday 27th and Sunday 29th November. We also hope to take advantage of the situation and intend to have some lead-in classes in the weeks prior. 
-            </p>
-            <p>
-              Come join us for the many classes on interesting subjects, Royal courts, feast, bardic circles, and general merriment and companionship. 
-            </p>
-            <p>
-              We will be running this event on Central Drachenwald time (CET), but the times on the schedule will be linked to your own time zone thanks to the wonderful website team so you know exactly when things are happening.
-            </p>
-            <p>
-              This is an excellent opportunity for you to teach, no matter where you’re from. Anyone can submit a class proposal! We also hope to record as many of the classes as possible during the event, and make them available later. 
-            </p>
-            <p>
-              We’re looking forward to seeing as many of you as possible at University!
-            </p>
-            <p>
-              Guy De Dinan - Event Steward<br />
-              Catriona of the Ravens - University Chancellor
-            </p>
-            <p>
-              Please direct any questions to <a href="mailto:university@drachenwald.sca.org">university@drachenwald.sca.org</a>
-            </p>
-          </Col>
-
-          <Col xs={0} sm={1} xl={2}>
-          </Col>
-        </Row>
+        <br />
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
