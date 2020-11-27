@@ -128,16 +128,16 @@ const ClassDetail = (props) => {
             null
         }
 
-        <p>
+        <div>
           { thisClass.youtube
             ?
               <Youtubelink thisClass={thisClass} />
             :
               <Zoomlink thisClass={thisClass} />
           }
-        </p>
+        </div>
 
-
+        <br />
         <p>
           <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>{' '}
           <LinkContainer to="/classlist"><Button variant="primary"><b>See the class list</b></Button></LinkContainer>
