@@ -4,7 +4,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const WhatsOnNowRoom = (props) => {
 
-  const nowish = new Date( props.now.getTime() + 5*1000 );
+  const now = new Date();
+  const nowish = new Date( now.getTime() + 5*60000 );
 
   let onNow;
 
