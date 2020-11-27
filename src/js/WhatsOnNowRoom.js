@@ -17,33 +17,52 @@ const WhatsOnNowRoom = (props) => {
     )
   }
 
+  if ( onNow ) {
+
+    return (
+            <>
+              <b>{props.room} room</b><br />
+              <span className="text-muted">
+                <small>
+                  {onNow.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}
+                  -
+                  {onNow.end.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}
+                </small>
+                <br />
+              </span>
+              {onNow.title}<br />
+              <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
+              <br /><br />
+            </>
+    )
+
+  }
+
+  const onNext = onNow = props.schedByRoom[props.room]
+    .find( row => ( row.start > nowish && row.title.indexOf("**CANCELLED**") === -1 ));
+
   return (
     <>
-      { onNow
+      <b>{props.room} room</b><br />
+      Not currently active
+      <br /><br />
+
+      { onNext
         ?
           <>
-            <b>{props.room} room</b><br />
             <span className="text-muted">
-              <small>
-                {onNow.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}
-                -
-                {onNow.end.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}
-              </small>
-              <br />
+              Coming up at {onNext.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}:<br />
+              {onNext.title}
             </span>
-            {onNow.title}<br />
-            <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
-            <br /><br />
           </>
         :
-          <>
-            <b>{props.room} room</b><br />
-            <span className="text-muted">Not currently active</span>
-            <br /><br />
-          </>
+        null
       }
     </>
+
   )
+
+
 
 };
 
