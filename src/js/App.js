@@ -116,7 +116,7 @@ function App() {
 
   useEffect(() => {
     const schedRefreshInterval = setInterval(() => {
-      fetch(scheduleUrl)
+      fetch(scheduleUrl, { cache: 'no-cache' })
       .then(response => {
         if ( response.status === 200 ) {
           response.json()
