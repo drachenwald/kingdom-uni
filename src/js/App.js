@@ -114,6 +114,23 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    const schedRefreshInterval = setInterval(() => {
+      fetch(scheduleUrl)
+      .then(response => {
+        if ( response.status === 200 ) {
+          response.json()
+            .then( data => {
+              setSchedByRoom( assembleSchedByRoom( data ) )
+              return setSchedule( assembleSchedule( data ) )
+          })
+        }
+      })
+    }, 120000);
+    return () => clearInterval(schedRefreshInterval);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
       <Router>
