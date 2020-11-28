@@ -118,7 +118,6 @@ function App() {
     const schedRefreshInterval = setInterval(() => {
       fetch(scheduleUrl)
       .then(response => {
-        console.log( response.status );
         if ( response.status === 200 ) {
           response.json()
             .then( data => {
