@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button, CardDeck, Card, Alert } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Icon from '@mdi/react';
+import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
-import WhatsOnNow from './WhatsOnNow';
+// import WhatsOnNow from './WhatsOnNow';
 
 import textile from '../images/cards/textile.jpg';
 import gaita from '../images/cards/gaita.jpg';
@@ -54,10 +56,24 @@ const Home = (props) => {
         </CardDeck>
 
         <br />
-
-        <WhatsOnNow schedByRoom={props.schedByRoom} roomnames={props.roomnames} />
-
         <br />
+
+        <Alert className="text-center">
+          <h2>
+            Kingdom University has closed.
+          </h2>
+          <p>
+            Drachenwald Kingdom University 2020 has finished. Thank you for attending!<br />
+            Recordings of sessions will be available on YouTube in due course.
+          </p>
+
+            <Button variant="primary" href="https://www.youtube.com/channel/UCh9sNalGMvako2XS7bb5rfA">
+              <Icon path={mdiYoutube} />
+              {' '}
+              <b>Drachenwald YouTube Channel</b>
+            </Button>
+
+        </Alert>
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
