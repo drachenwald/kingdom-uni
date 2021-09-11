@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button, CardDeck, Card, Alert } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import Icon from '@mdi/react';
-import { mdiYoutube } from '@mdi/js';
+//import Icon from '@mdi/react';
+//import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
 // import WhatsOnNow from './WhatsOnNow';
 
-import textile from '../images/cards/textile.jpg';
-import gaita from '../images/cards/gaita.jpg';
-import food from '../images/cards/food.jpg';
+import register from '../images/cards/register.jpg';
+import goldwork from '../images/cards/goldwork.jpg';
+import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
@@ -17,40 +17,41 @@ const Home = (props) => {
     <>
       <Banner
         headline="Drachenwald Kingdom University"
-        subhead="27-29 November 2020"
+        subhead="19-21 November 2021"
       />
 
       <Container>
 
         <CardDeck>
           <Card>
-            <Card.Img variant="top" src={textile} />
+            <Card.Img variant="top" src={goldwork} />
             <Card.Body>
-              <Card.Title>Schedule</Card.Title>
+              <Card.Title>Call for Classes</Card.Title>
               <Card.Text>
-                Plus evening sessions in the week leading up to the event.
+                We're looking for both live and recorded classes.
               </Card.Text>
-              <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
+              <LinkContainer to="/callforclasses"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src={gaita} />
+            <Card.Img variant="top" src={register} />
             <Card.Body>
-              <Card.Title>Ball and Live Music</Card.Title>
+              <Card.Title>Registration</Card.Title>
               <Card.Text>
-                Mistress Judith will lead us in the dance to LIVE music from Gaita.
+                Sign up to attend. Submit a class if you want to teach. 
               </Card.Text>
-              <LinkContainer to="/classes/kingdom-of-drachenwald/ball"><Button variant="primary"><b>More info about the ball</b></Button></LinkContainer>
+              <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeZj4XFu_C8-zc5ejLYZL-kUQaGz4UqOyrR-_bBU5WF2XcA0g/viewform"><b>Register here</b></Button>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={food} />
             <Card.Body>
-            <Card.Title>Feast</Card.Title>
+            <Card.Title>Housekeeping</Card.Title>
               <Card.Text>
-                Cook along with Amphelise's recipes, then join us over dinner.
+               Guidelines for online conduct of teachers, assistants and attendees
               </Card.Text>
-              <LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
+              //<LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
+              <LinkContainer to="/housekeeping"><Button variant="primary"><b>More about conduct</b></Button></LinkContainer>
             </Card.Body>
           </Card>
         </CardDeck>
@@ -58,22 +59,7 @@ const Home = (props) => {
         <br />
         <br />
 
-        <Alert className="text-center">
-          <h2>
-            Kingdom University has closed.
-          </h2>
-          <p>
-            Drachenwald Kingdom University 2020 has finished. Thank you for attending!<br />
-            Recordings of sessions will be available on YouTube in due course.
-          </p>
-
-            <Button variant="primary" href="https://www.youtube.com/channel/UCh9sNalGMvako2XS7bb5rfA">
-              <Icon path={mdiYoutube} />
-              {' '}
-              <b>Drachenwald YouTube Channel</b>
-            </Button>
-
-        </Alert>
+      
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
@@ -83,25 +69,14 @@ const Home = (props) => {
             <br />
             <Alert variant="secondary">
               <h3>Event staff</h3>
-              <p>
-                TH Lord Guy de Dinan - Event Steward<br />
-                Viscountess Caitriona of the Ravens - Kingdom Chancellor
-              </p>
-            
-              <p>
-                Web Team:<br />
-                TH Lady Marcella di Cavallino<br />
-                Lady Yda Van Boulogne<br />
-                TH Lady Sela de la Rosa
-              </p>
-
-              <p>
-                Lady Shirin Duxt Feroz - Queen of Discord<br />
-                Viscount Yannick of Normandy - Zoom Tech<br />
-                Henric vanden Casteele - Social Media<br />
-                Lord Aodhan dha Cheist - Games and Gaming<br />
-                Lady Amphelise de Wodeham - Feast cook
-              </p>
+              <ul>
+              <li>Event Steward: Elen  Benet</li>
+               <li> Chancellor: Caitrona  of the Ravens</li>
+              <li> Food and Feast: Amphelise  de Wodeham</li>
+               <li> Website: Maria  Harsick</li>
+                <li> Social Media: Henric  van den Casteele</li>
+               <li> Technology Maestro: Yannick  of Normandy</li>
+              </ul>
 
             </Alert>
           </Col>
