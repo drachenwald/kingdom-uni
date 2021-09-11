@@ -6,7 +6,7 @@ import heraldry from '../images/uni-chancellor-badge.svg';
 import drachenwald_arms from '../images/drachenwald-arms.svg';
 import dcbadge from '../images/dcbadge.png';
 
-// import Ticker from './Ticker';
+import Ticker from './Ticker';
 
 const Layout = (props) => {
   return (
@@ -30,6 +30,14 @@ const Layout = (props) => {
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
               //<LinkContainer to="/classlist"><Nav.Link className="mx-2">Class list</Nav.Link></LinkContainer>
               //<LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
+            </Nav>
+            <Nav>
+              <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
+              <Nav.Item className="bg-drachenwald text-gold text-left">
+                <div style={{width: '145px', textAlign: 'right'}} >
+                  <Ticker {...props} />
+                </div>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
