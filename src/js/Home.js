@@ -50,7 +50,7 @@ const Home = (props) => {
               <Card.Text>
                Guidelines for online conduct of teachers, assistants and attendees
               </Card.Text>
-              //<LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
+              <LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
               <LinkContainer to="/housekeeping"><Button variant="primary"><b>Read about conduct</b></Button></LinkContainer>
             </Card.Body>
           </Card>
