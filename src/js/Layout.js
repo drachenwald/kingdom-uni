@@ -28,8 +28,6 @@ const Layout = (props) => {
           <Navbar.Collapse>
             <Nav className="ml-auto">
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
-              <LinkContainer to="/classlist"><Nav.Link className="mx-2">Class list</Nav.Link></LinkContainer>
-              <LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
               <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
@@ -53,14 +51,14 @@ const Layout = (props) => {
             <Col xs="auto">
               <Navbar.Brand href="https://drachenwald.sca.org/">
                 <img
-                  alt=""
+                  alt="Drachenwald logo"
                   src={drachenwald_arms}
                   width="90"
                   className="d-inline-block align-middle"
                 />
               </Navbar.Brand>
             </Col>
-            <Col className="align-middle">
+            <Col >
               <Navbar.Text className="align-middle">
                 <p>
                   &copy; 2020 Drachenwald. This is a subsite of the recognised web site for the Kingdom of Drachenwald in the Society for Creative Anachronism.<br />
@@ -71,11 +69,11 @@ const Layout = (props) => {
                 </p>
               </Navbar.Text>
             </Col>
-            <Col className="align-right">
+            <Col xs="auto" className="align-right">
             <img
                   alt=""
                   src={dcbadge}
-                  width="90"
+                  width="100"
                   className="d-inline-block align-middle"
                 />
             </Col>

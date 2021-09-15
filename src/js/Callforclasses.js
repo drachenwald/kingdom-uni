@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
@@ -15,18 +15,17 @@ const Callforclasses = (props) => {
 
         <Row>
           <Col xs={0} md={1} lg={2}>
-            
+
           </Col>
 
           <Col>
-            
 
-<br />
-<br />           
-              
+
+  <Alert variant="secondary" >
+
               <p>Dear all, <br />
                 we would like to invite everyone to attend another exciting digital Drachenwald Kingdom University event, 19-21 November 2021. The classes will be a combination of live and recorded classes held on Zoom channels and using a Discord server for chat and socialising during the event. </p>
-              <p>Please consider offering a class for this event. Classes can be either designed as live, or as pre-recorded with a Q&A session live during the event. We'd love to see classes in: 
+              <p>Please consider offering a class for this event. Classes can be either designed as live, or as pre-recorded with a Q&A session live during the event. We'd love to see classes in:
               </p>
               <ul>
     <li>Sewing and Costuming</li>
@@ -40,6 +39,7 @@ const Callforclasses = (props) => {
 </ul>
               <p><Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeZj4XFu_C8-zc5ejLYZL-kUQaGz4UqOyrR-_bBU5WF2XcA0g/viewform"><b>Register and submit a class</b></Button>
               </p>
+</Alert>
 
 
             <h2>Information on designing classes</h2>
@@ -65,7 +65,7 @@ const Callforclasses = (props) => {
           </Col>
         </Row>
 
-        
+
 
 
 
