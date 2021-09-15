@@ -9,6 +9,7 @@ import NotFound from './NotFound';
 import ClassDetail from './ClassDetail';
 import ClassList from './ClassList';
 import Housekeeping from './Housekeeping';
+import Callforclasses from'./Callforclasses';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
     const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
     const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
     const p = new RegExp(a.split('').join('|'), 'g')
-  
+
     return string.toString().toLowerCase()
       .replace(/\s+/g, '-') // Replace spaces with -
       .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
@@ -49,7 +50,7 @@ function App() {
   }
 
   const slugify_class = ( teacher, title ) => {
-    
+
     //const yyyymmdd = datestamp.toLocaleDateString( 'sv-SE', { timeZone: eventTimezone.shortname, year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g,'-');
     //const hhmm = datestamp.toLocaleTimeString( 'sv-SE', { timeZone: eventTimezone.shortname, hour: '2-digit', minute: '2-digit' }).replace(/:/,'');
     const teacherslug = slugify( teacher );
@@ -73,14 +74,14 @@ function App() {
         when: classDT,
         slug: slugify_class( row.teacher, row.title )
       }
-  
+
       if ( index === -1 ) {
         acc.push( { 'when': classDatestamp, 'classes': [thisclass] });
       } else {
         acc[index]['classes'].push( thisclass );
       }
       return acc;
-  
+
     }, [] );
 
     return schedule;
@@ -117,8 +118,8 @@ function App() {
   /*
    * Check back every 2 minutes
    * Disabled following the end of the event
-   * 
-  
+   *
+
   useEffect(() => {
     const schedRefreshInterval = setInterval(() => {
       fetch(scheduleUrl, { cache: 'no-cache' })
@@ -154,6 +155,13 @@ function App() {
             <Route
               path="/housekeeping"
               render={(props) => <Housekeeping
+                                    {...props}
+                                  />}
+            />
+
+            <Route
+              path="/callforclasses"
+              render={(props) => <Callforclasses
                                     {...props}
                                   />}
             />

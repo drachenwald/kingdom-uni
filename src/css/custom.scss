@@ -35,7 +35,7 @@ $navbar-dark-toggler-border-color:  rgba($gold, .1) !default;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff; 
+  color: #ffffff;
   text-shadow: 2px 2px #000;
   // height: 300px;
 
@@ -47,6 +47,9 @@ $navbar-dark-toggler-border-color:  rgba($gold, .1) !default;
 svg {
   width: 1.5rem;
 }
+
+.container a {text-decoration: underline;}
+a.btn,.navbar .container a {text-decoration: none;}
 
 
 // Import Bootstrap and its default variables

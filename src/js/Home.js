@@ -21,6 +21,8 @@ const Home = (props) => {
       />
 
       <Container>
+      <Alert>
+      </Alert>
 
         <CardDeck>
           <Card>
@@ -38,7 +40,7 @@ const Home = (props) => {
             <Card.Body>
               <Card.Title>Registration</Card.Title>
               <Card.Text>
-                Sign up to attend. Submit a class if you want to teach. 
+                Sign up to attend. Submit a class if you want to teach.
               </Card.Text>
               <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeZj4XFu_C8-zc5ejLYZL-kUQaGz4UqOyrR-_bBU5WF2XcA0g/viewform"><b>Register here</b></Button>
             </Card.Body>
@@ -50,7 +52,6 @@ const Home = (props) => {
               <Card.Text>
                Guidelines for online conduct of teachers, assistants and attendees
               </Card.Text>
-              //<LinkContainer to="/classes/lady-amphelise-de-wodeham/join-us-for-the-feast"><Button variant="primary"><b>More info about the feast</b></Button></LinkContainer>
               <LinkContainer to="/housekeeping"><Button variant="primary"><b>Read about conduct</b></Button></LinkContainer>
             </Card.Body>
           </Card>
@@ -59,7 +60,7 @@ const Home = (props) => {
         <br />
         <br />
 
-      
+
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
