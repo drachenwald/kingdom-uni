@@ -102,7 +102,7 @@ const Home = (props) => {
             <br />
             <Alert variant="secondary">
               <h3>Event memorabilia</h3>
-              <p> T-shirts in three colours and two styles, as well as a tote, are now available.</p>
+              <p> T-shirts in several colours and styles, as well as a tote, are now available.</p>
               <Button variant="primary" href="https://my-store-bf500a.creator-spring.com/listing/ku2021"><b>View options</b></Button>
 
             </Alert>
