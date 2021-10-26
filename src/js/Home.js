@@ -64,6 +64,7 @@ const Home = (props) => {
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
+
           </Col>
 
           <Col>
@@ -83,8 +84,39 @@ const Home = (props) => {
           </Col>
 
           <Col xs={0} sm={1} xl={2}>
+
           </Col>
         </Row>
+
+        <Row>
+          <Col xs={0} sm={1} xl={2}><br />
+          <img
+                alt="Red T-shirt with penguin in a hat on it"
+                src="https://stringcrafter.files.wordpress.com/2021/10/200-1.jpg"
+                width="120"
+                className="d-inline-block align-middle"
+              />
+          </Col>
+
+          <Col>
+            <br />
+            <Alert variant="secondary">
+              <h3>Event memorabilia</h3>
+              <p> T-shirts in several colours and styles, as well as a tote, are now available. </p>
+              <Button variant="primary" href="https://my-store-bf500a.creator-spring.com/listing/ku2021"><b>View options</b></Button>
+
+            </Alert>
+          </Col>
+
+          <Col xs={0} sm={1} xl={2}><br />
+          <img
+                alt="Tote with penguin in a hat on it"
+                src="https://stringcrafter.files.wordpress.com/2021/10/200t-1.jpg"
+                width="120"
+                className="d-inline-block align-middle"
+              />  </Col>
+        </Row>
+
 
       </Container>
     </>
