@@ -1,15 +1,14 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 const Banner = (props) => {
 
   return (
     <>
       <div className="banner">
-        <Row className="h-100">
-          <Col sm className="my-auto">
-            <Container className="py-5">
-              <h1>{props.headline}</h1>
+
+            <Container>
+              <h1 className="pt-5">{props.headline}</h1>
               {
                 props.subhead
                 ?
@@ -29,11 +28,11 @@ const Banner = (props) => {
                 :
                   null
               }
+
+              <h1 className="pb-1">&nbsp;</h1>
               
             </Container>
-            
-          </Col>
-        </Row>
+
       </div>
       <br />
     </>
