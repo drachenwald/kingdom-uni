@@ -22,8 +22,7 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'Cambridge', 'Leiden', 'Bologna', 'Al-Azhar', 'Sorbonne', 'Urbino', 'Tartu', 'Oxford',
-                      'SpareA', 'SpareB', 'SpareC', 'SpareD' ]
+  const roomnames = [ 'LITTLE BLUE', 'EMPEROR', 'ROCKHOPPER', 'ADELIE' ]
 
   const scheduleUrl = 'https://scripts.drachenwald.sca.org/json/ku.json';
 
