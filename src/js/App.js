@@ -10,6 +10,7 @@ import ClassDetail from './ClassDetail';
 import ClassList from './ClassList';
 import Housekeeping from './Housekeeping';
 import Callforclasses from'./Callforclasses';
+import ObsBg from './ObsBg';
 
 function App() {
 
@@ -150,6 +151,18 @@ function App() {
                                     roomnames={roomnames}
                                   />}
             />
+
+            <Route
+              path="/obsbg"
+              render={(props) => <ObsBg
+                                    {...props}
+                                    schedule={schedule}
+                                    schedByRoom={schedByRoom}
+                                    eventTimezone={eventTimezone}
+                                    roomnames={roomnames}
+                                  />}
+            />
+
 
             <Route
               path="/housekeeping"

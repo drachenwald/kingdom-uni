@@ -24,16 +24,16 @@ const WhatsOnNow = (props) => {
       </Row>
       <Row>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Cambridge" schedByRoom={props.schedByRoom} now={now} />
+          <WhatsOnNowRoom room="LITTLE BLUE" schedByRoom={props.schedByRoom} now={now} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Leiden" schedByRoom={props.schedByRoom} now={now} />
+          <WhatsOnNowRoom room="EMPEROR" schedByRoom={props.schedByRoom} now={now} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Bologna" schedByRoom={props.schedByRoom} now={now} />
+          <WhatsOnNowRoom room="ROCKHOPPER" schedByRoom={props.schedByRoom} now={now} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Al-Azhar" schedByRoom={props.schedByRoom} now={now} />
+          <WhatsOnNowRoom room="ADELIE" schedByRoom={props.schedByRoom} now={now} />
         </Col>
       </Row>
       <Row>
@@ -41,20 +41,7 @@ const WhatsOnNow = (props) => {
           <br />
         </Col>
       </Row>
-      <Row>
-        <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Sorbonne" schedByRoom={props.schedByRoom} now={now} />
-        </Col>
-        <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Urbino" schedByRoom={props.schedByRoom} now={now} />
-        </Col>
-        <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Tartu" schedByRoom={props.schedByRoom} now={now} />
-        </Col>
-        <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Oxford" schedByRoom={props.schedByRoom} now={now} />
-        </Col>
-      </Row>
+
       
     </>
   );
