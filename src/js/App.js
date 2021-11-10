@@ -115,11 +115,6 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
-  /*
-   * Check back every 2 minutes
-   * Disabled following the end of the event
-   *
-
   useEffect(() => {
     const schedRefreshInterval = setInterval(() => {
       fetch(scheduleUrl, { cache: 'no-cache' })
@@ -136,7 +131,6 @@ function App() {
     return () => clearInterval(schedRefreshInterval);
     // eslint-disable-next-line
   }, []);
-  */
 
   return (
     <>
