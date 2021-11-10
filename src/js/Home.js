@@ -32,7 +32,7 @@ const Home = (props) => {
               <Card.Text>
                 View all classes running over the weekend.
               </Card.Text>
-              <LinkContainer to="/callforclasses"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
