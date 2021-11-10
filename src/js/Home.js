@@ -5,13 +5,16 @@ import { LinkContainer } from 'react-router-bootstrap';
 //import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
-// import WhatsOnNow from './WhatsOnNow';
+import WhatsOnNow from './WhatsOnNow';
 
 import register from '../images/cards/register.jpg';
 import goldwork from '../images/cards/goldwork.jpg';
 import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
+
+  const firstDay = new Date(2021,10,19);
+  const today = new Date();
 
   return (
     <>
@@ -23,6 +26,15 @@ const Home = (props) => {
       <Container>
       <Alert>
       </Alert>
+
+      { today < firstDay
+        ?
+          null
+        :
+          (
+            <WhatsOnNow schedByRoom={props.schedByRoom} />
+          )
+      }
 
         <CardDeck>
           <Card>
