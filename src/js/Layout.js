@@ -26,7 +26,10 @@ const Layout = (props) => {
           </LinkContainer>
           <Navbar.Toggle />
           <Navbar.Collapse>
+
+
             <Nav className="ml-auto">
+            <LinkContainer to="/schedule"><Nav.Link className="mx-1">Schedule</Nav.Link></LinkContainer>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
