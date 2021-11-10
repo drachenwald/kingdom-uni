@@ -28,11 +28,11 @@ const Home = (props) => {
           <Card>
             <Card.Img variant="top" src={goldwork} />
             <Card.Body>
-              <Card.Title>Call for Classes</Card.Title>
+              <Card.Title>Schedule</Card.Title>
               <Card.Text>
-                We're looking for both live and recorded classes.
+                View all classes running over the weekend.
               </Card.Text>
-              <LinkContainer to="/callforclasses"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
             </Card.Body>
           </Card>
           <Card>
