@@ -31,6 +31,7 @@ function App() {
 
   const [ schedule, setSchedule ] = useState([]);
   const [ schedByRoom, setSchedByRoom ] = useState({});
+  const [ flashmsg, setFlashmsg] = useState('');
 
   // From https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
 
@@ -109,6 +110,7 @@ function App() {
     fetch(scheduleUrl)
       .then(response => response.json())
       .then(data => {
+        setFlashmsg( data.flashmsg );
         setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
         return setSchedule( assembleSchedule( data['calendar'] ))
       })
@@ -122,6 +124,7 @@ function App() {
         if ( response.status === 200 ) {
           response.json()
             .then( data => {
+              setFlashmsg( data.flashmsg );
               setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
               return setSchedule( assembleSchedule( data['calendar'] ) )
           })
@@ -135,7 +138,7 @@ function App() {
   return (
     <>
       <Router>
-        <Layout eventTimezone={eventTimezone}>
+        <Layout eventTimezone={eventTimezone} flashmsg={flashmsg}>
           <Switch>
             <Route exact
               path="/"

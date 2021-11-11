@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Icon from '@mdi/react';
+import { mdiAlert } from '@mdi/js';
 
 import heraldry from '../images/uni-chancellor-badge.svg';
 import drachenwald_arms from '../images/drachenwald-arms.svg';
@@ -43,6 +45,21 @@ const Layout = (props) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      { props.flashmsg
+        ?
+          <div className="bg-warning">
+            <Container>
+              <div className="text-center">
+                <Icon path={mdiAlert} title="Alert" />{' '}
+                {props.flashmsg}
+              </div>
+            </Container>
+          </div>
+        :
+          null
+      }
+
 
       { props.children }
 
