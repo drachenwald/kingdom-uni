@@ -109,8 +109,8 @@ function App() {
     fetch(scheduleUrl)
       .then(response => response.json())
       .then(data => {
-        setSchedByRoom( assembleSchedByRoom( data ) )
-        return setSchedule( assembleSchedule( data ))
+        setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
+        return setSchedule( assembleSchedule( data['calendar'] ))
       })
     // eslint-disable-next-line
   }, []);
@@ -122,8 +122,8 @@ function App() {
         if ( response.status === 200 ) {
           response.json()
             .then( data => {
-              setSchedByRoom( assembleSchedByRoom( data ) )
-              return setSchedule( assembleSchedule( data ) )
+              setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
+              return setSchedule( assembleSchedule( data['calendar'] ) )
           })
         }
       })
