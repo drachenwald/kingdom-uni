@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Spinner, Row, Col } from 'react-bootstrap';
+import { Container, Spinner, Row, Col, Alert } from 'react-bootstrap';
 
 import Banner from './Banner';
 import ScheduleRow from './ScheduleRow';
