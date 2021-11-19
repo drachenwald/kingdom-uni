@@ -32,7 +32,13 @@ const WhatsOnNowRoom = (props) => {
           <br />
         </span>
         {onNow.title}<br /><br />
-        <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
+        { props.mutebutton
+          ?
+            null
+          :
+            <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
+        }
+        
         <br /><br />
       </>
     )
