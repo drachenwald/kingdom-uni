@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Spinner, Row, Col } from 'react-bootstrap';
+import { Container, Spinner, Row, Col, Alert } from 'react-bootstrap';
 
 import Banner from './Banner';
 import ScheduleRow from './ScheduleRow';
@@ -46,7 +46,7 @@ const Schedule = (props) => {
           </Col>
         </Row>
 
-        { 
+        {
           props.schedule.map( ( row, i ) => {
 
             const outputRow = <ScheduleRow
@@ -66,9 +66,28 @@ const Schedule = (props) => {
 
           })
         }
+        <Row>
+          <Col xs={0} sm={1} xl={2}>
+
+          </Col>
+
+          <Col>
+            <br />  <Alert variant="secondary">
+          <h3>Class details</h3>
+          <ul>
+          <li>If you would like more information about individual classes, please follow the links to the class descriptions, where handouts and videos will be available if provided to the event staff beforehand. </li>
+          <li>Teachers, if you need to change information about your class, or provide a handout, please email the university chancellor on <a href="mailto:dwkuchancellor@gmail.com">dwkuchancellor@gmail.com</a>.  </li>
+          </ul>
+
+        </Alert></Col>
+
+        <Col xs={0} sm={1} xl={2}>
+
+        </Col>
+      </Row>
 
       </Container>
-      
+
     </>
   );
 
