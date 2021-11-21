@@ -1,15 +1,15 @@
 import React from 'react';
-import { Container, Row, Col, Button, CardDeck, Card, Alert } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
+// import { LinkContainer } from 'react-router-bootstrap';
 //import Icon from '@mdi/react';
 //import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
 import WhatsOnNow from './WhatsOnNow';
 
-import register from '../images/cards/register.jpg';
-import goldwork from '../images/cards/goldwork.jpg';
-import food from '../images/cards/sublety.jpg';
+// import register from '../images/cards/register.jpg';
+// import goldwork from '../images/cards/goldwork.jpg';
+// import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 

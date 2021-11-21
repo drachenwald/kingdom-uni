@@ -117,24 +117,6 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    const schedRefreshInterval = setInterval(() => {
-      fetch(scheduleUrl, { cache: 'no-cache' })
-      .then(response => {
-        if ( response.status === 200 ) {
-          response.json()
-            .then( data => {
-              setFlashmsg( data.flashmsg );
-              setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
-              return setSchedule( assembleSchedule( data['calendar'] ) )
-          })
-        }
-      })
-    }, 120000);
-    return () => clearInterval(schedRefreshInterval);
-    // eslint-disable-next-line
-  }, []);
-
   return (
     <>
       <Router>
