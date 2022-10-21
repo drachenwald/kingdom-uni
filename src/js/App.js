@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { readRemoteFile } from 'react-papaparse';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './Layout';
 import Home from './Home';
@@ -121,80 +120,69 @@ function App() {
     <>
       <Router>
         <Layout eventTimezone={eventTimezone} flashmsg={flashmsg}>
-          <Switch>
+          <Routes>
             <Route exact
               path="/"
-              render={(props) => <Home
-                                    {...props}
-                                    schedByRoom={schedByRoom}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <Home
+                          schedByRoom={schedByRoom}
+                          roomnames={roomnames}
+                        /> }
             />
 
             <Route
               path="/obsbg"
-              render={(props) => <ObsBg
-                                    {...props}
-                                    schedule={schedule}
-                                    schedByRoom={schedByRoom}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ObsBg
+                          schedule={schedule}
+                          schedByRoom={schedByRoom}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        /> }
             />
 
 
             <Route
               path="/housekeeping"
-              render={(props) => <Housekeeping
-                                    {...props}
-                                  />}
+              element={ <Housekeeping /> }
             />
 
             <Route
               path="/callforclasses"
-              render={(props) => <Callforclasses
-                                    {...props}
-                                  />}
+              element={ <Callforclasses /> }
             />
 
             <Route
               path="/schedule"
-              render={(props) => <Schedule
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <Schedule
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        /> }
             />
 
             <Route
               path="/classes/:teacher/:slug"
-              render={(props) => <ClassDetail
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ClassDetail
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        />}
             />
 
             <Route
               path="/classlist"
-              render={(props) => <ClassList
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ClassList
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        />  }
             />
 
             <Route
               path="*"
-              render={(props) => <NotFound
-                                    {...props}
-                                  />}
+              element={ <NotFound /> }
             />
 
-          </Switch>
+          </Routes>
         </Layout>
       </Router>
     </>
