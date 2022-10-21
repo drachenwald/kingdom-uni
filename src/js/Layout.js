@@ -1,9 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Icon from '@mdi/react';
+import { mdiAlert } from '@mdi/js';
 
-import heraldry from '../images/uni-chancellor-badge.svg';
-import drachenwald_arms from '../images/drachenwald-arms.svg';
+import heraldry from '../images/uni-chancellor-badge.png';
+import drachenwald_arms from '../images/drachenwald-arms.png';
 import dcbadge from '../images/dcbadge.png';
 
 import Ticker from './Ticker';
@@ -21,15 +23,15 @@ const Layout = (props) => {
                 width="95"
                 className="d-inline-block align-middle"
               />{' '}
-              Kingdom University
+              Online Kingdom University
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle />
           <Navbar.Collapse>
 
 
-            <Nav className="ml-auto">
-            <LinkContainer to="/schedule"><Nav.Link className="mx-1">Schedule</Nav.Link></LinkContainer>
+            <Nav className="ms-auto">
+              <LinkContainer to="/schedule"><Nav.Link className="mx-1">Schedule</Nav.Link></LinkContainer>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
@@ -43,6 +45,21 @@ const Layout = (props) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      { props.flashmsg
+        ?
+          <div className="bg-warning">
+            <Container>
+              <div className="text-center">
+                <Icon path={mdiAlert} title="Alert" />{' '}
+                {props.flashmsg}
+              </div>
+            </Container>
+          </div>
+        :
+          null
+      }
+
 
       { props.children }
 
@@ -64,7 +81,7 @@ const Layout = (props) => {
             <Col >
               <Navbar.Text className="align-middle">
                 <p>
-                  &copy; 2020 Drachenwald. This is a subsite of the recognised web site for the Kingdom of Drachenwald in the Society for Creative Anachronism.<br />
+                  &copy; {new Date().getFullYear()} Drachenwald. This is a subsite of the recognised web site for the Kingdom of Drachenwald in the Society for Creative Anachronism.<br />
                   Copyright on all content and images remains with the creators.
                 </p>
                 <p>

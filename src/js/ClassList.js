@@ -54,7 +54,7 @@ const ClassList = (props) => {
               <CategoryIcon category={item.category} />{' '}
               { item.teacher
                 ?
-                  <Link to={'classes/' + item.slug}>{item.title}<span className="text-muted"> - {item.teacher}</span></Link>
+                  <Link to={'/classes/' + item.slug}>{item.title}<span className="text-muted"> - {item.teacher}</span></Link>
                 :
                   <span>{item.title}</span>
               }

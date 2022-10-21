@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { readRemoteFile } from 'react-papaparse';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './Layout';
 import Home from './Home';
@@ -31,6 +30,7 @@ function App() {
 
   const [ schedule, setSchedule ] = useState([]);
   const [ schedByRoom, setSchedByRoom ] = useState({});
+  const [ flashmsg, setFlashmsg] = useState('');
 
   // From https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
 
@@ -109,113 +109,80 @@ function App() {
     fetch(scheduleUrl)
       .then(response => response.json())
       .then(data => {
-        setSchedByRoom( assembleSchedByRoom( data ) )
-        return setSchedule( assembleSchedule( data ))
+        setFlashmsg( data.flashmsg );
+        setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
+        return setSchedule( assembleSchedule( data['calendar'] ))
       })
     // eslint-disable-next-line
   }, []);
-
-  /*
-   * Check back every 2 minutes
-   * Disabled following the end of the event
-   *
-
-  useEffect(() => {
-    const schedRefreshInterval = setInterval(() => {
-      fetch(scheduleUrl, { cache: 'no-cache' })
-      .then(response => {
-        if ( response.status === 200 ) {
-          response.json()
-            .then( data => {
-              setSchedByRoom( assembleSchedByRoom( data ) )
-              return setSchedule( assembleSchedule( data ) )
-          })
-        }
-      })
-    }, 120000);
-    return () => clearInterval(schedRefreshInterval);
-    // eslint-disable-next-line
-  }, []);
-  */
 
   return (
     <>
       <Router>
-        <Layout eventTimezone={eventTimezone}>
-          <Switch>
+        <Layout eventTimezone={eventTimezone} flashmsg={flashmsg}>
+          <Routes>
             <Route exact
               path="/"
-              render={(props) => <Home
-                                    {...props}
-                                    schedByRoom={schedByRoom}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <Home
+                          schedByRoom={schedByRoom}
+                          roomnames={roomnames}
+                        /> }
             />
 
             <Route
               path="/obsbg"
-              render={(props) => <ObsBg
-                                    {...props}
-                                    schedule={schedule}
-                                    schedByRoom={schedByRoom}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ObsBg
+                          schedule={schedule}
+                          schedByRoom={schedByRoom}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        /> }
             />
 
 
             <Route
               path="/housekeeping"
-              render={(props) => <Housekeeping
-                                    {...props}
-                                  />}
+              element={ <Housekeeping /> }
             />
 
             <Route
               path="/callforclasses"
-              render={(props) => <Callforclasses
-                                    {...props}
-                                  />}
+              element={ <Callforclasses /> }
             />
 
             <Route
               path="/schedule"
-              render={(props) => <Schedule
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <Schedule
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        /> }
             />
 
             <Route
               path="/classes/:teacher/:slug"
-              render={(props) => <ClassDetail
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ClassDetail
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        />}
             />
 
             <Route
               path="/classlist"
-              render={(props) => <ClassList
-                                    {...props}
-                                    schedule={schedule}
-                                    eventTimezone={eventTimezone}
-                                    roomnames={roomnames}
-                                  />}
+              element={ <ClassList
+                          schedule={schedule}
+                          eventTimezone={eventTimezone}
+                          roomnames={roomnames}
+                        />  }
             />
 
             <Route
               path="*"
-              render={(props) => <NotFound
-                                    {...props}
-                                  />}
+              element={ <NotFound /> }
             />
 
-          </Switch>
+          </Routes>
         </Layout>
       </Router>
     </>

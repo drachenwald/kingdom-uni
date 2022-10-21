@@ -15,21 +15,20 @@ const Housekeeping = (props) => {
 
         <Row>
           <Col xs={0} md={1} lg={2}>
-            
+
           </Col>
 
           <Col>
-            
+
 
 <br />
             <Alert variant="secondary">
-              
+
               <p>Dear all, <br />
                 we would like to invite everyone to attend another exciting digital Drachenwald Kingdom University event, 19-21 November 2021. The classes will be a combination of live and recorded classes held on Zoom channels and using a Discord server for chat and socialising during the event. </p>
-              <p>Please consider offering a class for this event. Classes can be either designed as live, or as pre-recorded with a Q&A session live during the event. 
-
+              <p>
               </p>
-              <p><LinkContainer to="/callforclasses"><Button variant="primary"><b>View call for classes, including topics</b></Button></LinkContainer>
+              <p><LinkContainer to="/schedule"><Button variant="primary"><b>View schedule</b></Button></LinkContainer>
               </p>
 
             </Alert>
@@ -66,7 +65,7 @@ const Housekeeping = (props) => {
 <p>All the best from your organising team!</p>
 
             <p>
-              <LinkContainer to="/callforclasses"><Button variant="primary"><b>View call for classes</b></Button></LinkContainer>
+              <LinkContainer to="/schedule"><Button variant="primary"><b>View schedule</b></Button></LinkContainer>
             </p>
           </Col>
 
@@ -75,7 +74,7 @@ const Housekeeping = (props) => {
           </Col>
         </Row>
 
-        
+
 
 
 

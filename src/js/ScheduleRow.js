@@ -40,7 +40,7 @@ const ScheduleRow = (props) => {
                 ?
                   <Col
                     xs={12} md={7}
-                    className="border-left bg-light text-dark border" as={Link} to={'classes/' + item.slug}
+                    className="border-left bg-light text-dark border" as={Link} to={'/classes/' + item.slug}
                   >
                     {item.title}
                     <span className="d-none d-sm-inline text-muted"><i> - {item.teacher}</i></span>
