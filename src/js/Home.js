@@ -13,7 +13,7 @@ import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
-  const firstDay = new Date(2021,10,19);
+  const firstDay = new Date(2023,0,27);
   const today = new Date();
 
   return (
@@ -27,22 +27,25 @@ const Home = (props) => {
 
         { today < firstDay
           ?
-            null
+            <p class="text-center">
+              Join us for a weekend of online classes from Drachenwald!
+            </p>
           :
             (
               <WhatsOnNow schedByRoom={props.schedByRoom} />
             )
         }
 
+        <br />
+
         { <CardGroup>
             <Card>
               <Card.Img variant="top" src={goldwork} />
               <Card.Body>
-                <Card.Title>Schedule</Card.Title>
+                <Card.Title>Offer a class</Card.Title>
                 <Card.Text>
-                  View all classes running over the weekend.
+                  Submissions will open shortly.
                 </Card.Text>
-                <LinkContainer to="/schedule"><Button variant="primary"><b>Read more...</b></Button></LinkContainer>
               </Card.Body>
             </Card>
             <Card>
@@ -50,9 +53,8 @@ const Home = (props) => {
               <Card.Body>
                 <Card.Title>Registration</Card.Title>
                 <Card.Text>
-                  Sign up to attend. Submit a class if you want to teach.
+                  Registration will open shortly.
                 </Card.Text>
-                <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeZj4XFu_C8-zc5ejLYZL-kUQaGz4UqOyrR-_bBU5WF2XcA0g/viewform"><b>Register here</b></Button>
               </Card.Body>
             </Card>
             <Card>
@@ -76,8 +78,21 @@ const Home = (props) => {
           </Col>
 
           <Col>
-             <h3>Kingdom University is now closed</h3>
-             <p>Thankyou to everyone - the teachers, the attendees and the event team for making this event such a special one. </p>
+             <h3>What’s Kingdom University online all about?</h3>
+             
+             <p>Due to Covid 19 the ensuing pandemic and the cancellation of events in 2020 the event staff
+              for Kingdom University decided to tun the event into an online event and offer classes over Zoom.
+              It worked! People enjoyed themselves. It was repeated in 2021 because we were still not having
+              in person events much.</p>
+             
+             <p>In 2022 Kingdom University was able to be held and was enjoyed by all, though those who couldn’t
+              make it asked about hybrid or an online event. I after consultation with some hobbits decided that
+              the people of Drachenwald deserve Second University. So we are bringing you KU Online 2023. </p>
+
+             <p>
+             If you have any queries or questions plrase contact the University Chancellor
+             at <a href="mailto:university@drachenwald.sca.org">university@drachenwald.sca.org</a>.
+             </p>
           </Col>
 
           <Col xs={0} sm={1} xl={2}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import Banner from './Banner';
@@ -19,21 +19,6 @@ const Housekeeping = (props) => {
           </Col>
 
           <Col>
-
-
-<br />
-            <Alert variant="secondary">
-
-              <p>Dear all, <br />
-                we would like to invite everyone to attend another exciting digital Drachenwald Kingdom University event, 19-21 November 2021. The classes will be a combination of live and recorded classes held on Zoom channels and using a Discord server for chat and socialising during the event. </p>
-              <p>
-              </p>
-              <p><LinkContainer to="/schedule"><Button variant="primary"><b>View schedule</b></Button></LinkContainer>
-              </p>
-
-            </Alert>
-
-
 
             <h2>Housekeeping</h2>
   <p>We are all very excited to be bringing you another event via Zoom and Discord channels. We  want this to be a friendly, fun and respectful event, and ask that you help us deliver the smoothest possible content with the following Housekeeping steps:</p>
