@@ -27,7 +27,7 @@ const Home = (props) => {
 
         { today < firstDay
           ?
-            <p class="text-center">
+            <p className="text-center">
               Join us for a weekend of online classes from Drachenwald!
             </p>
           :
@@ -42,10 +42,11 @@ const Home = (props) => {
             <Card>
               <Card.Img variant="top" src={goldwork} />
               <Card.Body>
-                <Card.Title>Offer a class</Card.Title>
+                <Card.Title>Offer to teach</Card.Title>
                 <Card.Text>
-                  Submissions will open shortly.
+                  Would you like to give a class, lecture or workshop?
                 </Card.Text>
+                <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdTQ8IJvc8gRloUvW4FASCDgl2LlSJNBHQx8OhXM1KlWxg9gw/viewform" variant="primary"><b>Fill in the form</b></Button>
               </Card.Body>
             </Card>
             <Card>
@@ -55,6 +56,7 @@ const Home = (props) => {
                 <Card.Text>
                   Registration will open shortly.
                 </Card.Text>
+                <Button variant="primary" disabled><b>Coming soon</b></Button>
               </Card.Body>
             </Card>
             <Card>

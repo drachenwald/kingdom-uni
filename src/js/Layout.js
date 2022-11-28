@@ -6,7 +6,7 @@ import { mdiAlert } from '@mdi/js';
 
 import heraldry from '../images/uni-chancellor-badge.png';
 import drachenwald_arms from '../images/drachenwald-arms.png';
-import dcbadge from '../images/dcbadge.png';
+import penguin from '../images/penguin.png';
 
 import Ticker from './Ticker';
 
@@ -31,7 +31,7 @@ const Layout = (props) => {
 
 
             <Nav className="ms-auto">
-              <LinkContainer to="/schedule"><Nav.Link className="mx-1">Schedule</Nav.Link></LinkContainer>
+              <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSdTQ8IJvc8gRloUvW4FASCDgl2LlSJNBHQx8OhXM1KlWxg9gw/viewform" className="mx-1">Offer a class</Nav.Link>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
@@ -92,7 +92,7 @@ const Layout = (props) => {
             <Col xs="auto" className="align-right">
             <img
                   alt=""
-                  src={dcbadge}
+                  src={penguin}
                   width="100"
                   className="d-inline-block align-middle"
                 />
