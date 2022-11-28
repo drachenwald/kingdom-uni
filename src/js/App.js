@@ -22,9 +22,9 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'LITTLE BLUE', 'EMPEROR', 'ROCKHOPPER', 'ADELIE' ]
+  const roomnames = [ 'TheShire - Lobby', 'Rivendell', 'Helm\'s Deep', 'Gondor', 'Fangorn Forest', 'Mordor' ]
 
-  const scheduleUrl = 'https://scripts.drachenwald.sca.org/json/ku.json';
+  const scheduleUrl = 'https://dis.drachenwald.sca.org/data/ku.json';
 
   // Code starts here
 
@@ -63,7 +63,7 @@ function App() {
   const assembleSchedule = ( data ) => {
     const schedule = data.reduce( (acc, row) => {
 
-      const classDT = row.when.replace('Z','') + eventTimezone.offset;
+      const classDT = row.when;
 
       const classDatestamp = new Date( classDT );
 
@@ -95,8 +95,8 @@ function App() {
       assembly[roomnames[i]] = data.filter( row => row.room === roomnames[i] )
         .map( row => (
           { title: row.title,
-            start: new Date( row.when.replace('Z','') + eventTimezone.offset ),
-            end: new Date( row['end time'].replace('Z','') + eventTimezone.offset ),
+            start: new Date( row.when ),
+            end: new Date( row['end_time'] ),
             slug: slugify_class( row.teacher, row.title )
           }
         ))
@@ -110,8 +110,8 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setFlashmsg( data.flashmsg );
-        setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
-        return setSchedule( assembleSchedule( data['calendar'] ))
+        setSchedByRoom( assembleSchedByRoom( data ) )
+        return setSchedule( assembleSchedule( data ))
       })
     // eslint-disable-next-line
   }, []);

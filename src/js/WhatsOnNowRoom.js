@@ -11,7 +11,7 @@ const WhatsOnNowRoom = (props) => {
 
   if ( props.schedByRoom[props.room] ) {
     onNow = props.schedByRoom[props.room]
-      .find( row => ( row.start < nowish && row.end > nowish && row.title.indexOf("**CANCELLED**") === -1  ));
+      .find( row => ( row.start < nowish && row.end > nowish && row.title.indexOf("CANCELLED") === -1  ));
   } else {
     return (
       <span className="text-muted">Loading...</span>
