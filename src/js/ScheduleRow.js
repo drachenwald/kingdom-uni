@@ -5,6 +5,8 @@ import Icon from '@mdi/react';
 import { mdiRecordRec } from '@mdi/js';
 
 import CategoryIcon from './CategoryIcon';
+import Duration from './Duration';
+import ClassLevelIcon from './ClassLevelIcon';
 
 
 const ScheduleRow = (props) => {
@@ -55,7 +57,7 @@ const ScheduleRow = (props) => {
               }
               
               <Col md={2} className='d-none d-md-block text-center'>
-                {item.duration}
+                <Duration mins={item['length-in-minutes']} />
               </Col>
               <Col md={1} className='d-none d-md-block text-center'>
                 { item.category
@@ -69,6 +71,12 @@ const ScheduleRow = (props) => {
                           </>
                         :
                         null
+                      }
+                      { item.level
+                        ?
+                          <ClassLevelIcon level={item.level} />
+                        :
+                           null
                       }
                     </>
                   :

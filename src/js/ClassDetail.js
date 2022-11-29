@@ -9,6 +9,8 @@ import Banner from './Banner';
 import CategoryIcon from './CategoryIcon';
 import Youtubelink from './Youtubelink';
 import Zoomlink from './Zoomlink';
+import Duration from './Duration';
+import ClassLevelIcon from './ClassLevelIcon';
 
 const ClassDetail = (props) => {
 
@@ -107,9 +109,23 @@ const ClassDetail = (props) => {
           {desc}
         </p>
 
+        { thisClass.materials
+          ?
+            <p><strong>Materials needed:</strong> { thisClass.materials }</p>
+          :
+            null
+        }
+
+        { thisClass.capacity.toLowerCase() === 'any'
+          ?
+            null
+          :
+            <p>This class has a maximum attendance of <strong>{ thisClass.capacity }</strong> participants.</p>
+        }
+
         <p>
           <CategoryIcon category={thisClass.category} /> {thisClass.category}<br />
-          <Icon path={mdiClockTimeThreeOutline} title="Duration" /> Duration {thisClass.duration}
+          <Icon path={mdiClockTimeThreeOutline} title="Duration" /> <Duration mins={thisClass['length-in-minutes']} />
           { thisClass.record === 'yes'
             ?
               <>
@@ -118,12 +134,20 @@ const ClassDetail = (props) => {
             :
             null
           }
+          { thisClass.level
+            ?
+              <>
+                <br /><ClassLevelIcon level={thisClass.level} />{thisClass.level} level class.
+              </>
+            :
+              null
+          }
         </p>
 
         {
           thisClass.handouts
           ?
-            <p><Button variant="primary" href={thisClass.handouts}><b>View class materials</b></Button></p>
+            <p><Button variant="primary" href={thisClass.handouts}><b>View class handout</b></Button></p>
           :
             null
         }

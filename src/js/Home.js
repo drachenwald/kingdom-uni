@@ -28,7 +28,8 @@ const Home = (props) => {
         { today < firstDay
           ?
             <p className="text-center">
-              Join us for a weekend of online classes from Drachenwald!
+              Join us for a weekend of online classes from Drachenwald!<br />
+              <strong>27-29 January 2023</strong>
             </p>
           :
             (
@@ -46,7 +47,7 @@ const Home = (props) => {
                 <Card.Text>
                   Would you like to give a class, lecture or workshop?
                 </Card.Text>
-                <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdTQ8IJvc8gRloUvW4FASCDgl2LlSJNBHQx8OhXM1KlWxg9gw/viewform" variant="primary"><b>Fill in the form</b></Button>
+                <Button href="https://docs.google.com/forms/d/e/1FAIpQLSdTQ8IJvc8gRloUvW4FASCDgl2LlSJNBHQx8OhXM1KlWxg9gw/viewform" variant="primary"><b>Apply to give a class</b></Button>
               </Card.Body>
             </Card>
             <Card>
