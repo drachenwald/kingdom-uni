@@ -114,7 +114,7 @@ const Home = (props) => {
             <Alert variant="secondary">
               <h3>Event staff</h3>
               <ul>
-                <li> Chancellor: Caitrona  of the Ravens</li>
+                <li> Chancellor: Caitriona  of the Ravens</li>
               </ul>
 
             </Alert>
