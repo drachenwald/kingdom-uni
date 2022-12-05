@@ -48,7 +48,7 @@ const Layout = (props) => {
 
       { props.flashmsg
         ?
-          <div className="bg-warning">
+          <div className="bg-warning" style={{'background-color': '#ffff00'}}>
             <Container>
               <div className="text-center">
                 <Icon path={mdiAlert} title="Alert" />{' '}
