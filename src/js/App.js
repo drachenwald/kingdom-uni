@@ -110,8 +110,8 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setFlashmsg( data.flashmsg );
-        setSchedByRoom( assembleSchedByRoom( data ) )
-        return setSchedule( assembleSchedule( data ))
+        setSchedByRoom( assembleSchedByRoom( data['calendar'] ) )
+        return setSchedule( assembleSchedule( data['calendar'] ))
       })
     // eslint-disable-next-line
   }, []);
