@@ -55,9 +55,9 @@ const Home = (props) => {
               <Card.Body>
                 <Card.Title>Registration</Card.Title>
                 <Card.Text>
-                  Registration will open shortly.
+                  Register in advance to attend the event.
                 </Card.Text>
-                <Button variant="primary" disabled><b>Coming soon</b></Button>
+                <Button variant="primary" href="https://www.eventbrite.com/e/drachenwald-kingdom-university-second-university-tickets-487994874807"><b>Register to attend</b></Button>
               </Card.Body>
             </Card>
             <Card>

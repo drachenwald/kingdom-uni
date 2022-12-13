@@ -31,6 +31,7 @@ const Layout = (props) => {
 
 
             <Nav className="ms-auto">
+              <Nav.Link href="https://www.eventbrite.com/e/drachenwald-kingdom-university-second-university-tickets-487994874807" className="mx-1">Attend</Nav.Link>
               <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSdTQ8IJvc8gRloUvW4FASCDgl2LlSJNBHQx8OhXM1KlWxg9gw/viewform" className="mx-1">Offer a class</Nav.Link>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
