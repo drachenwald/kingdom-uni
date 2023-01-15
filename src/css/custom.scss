@@ -48,8 +48,14 @@ svg {
   width: 1.5rem;
 }
 
-.container a {text-decoration: underline;}
+.container a {
+  text-decoration: underline;
+}
 a.btn,.navbar .container a {text-decoration: none;}
+
+.schedulerow {
+  color: inherit;
+}
 
 
 // Import Bootstrap and its default variables

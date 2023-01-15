@@ -3,6 +3,7 @@ import { Container, Spinner, Row, Col, Alert } from 'react-bootstrap';
 
 import Banner from './Banner';
 import ScheduleRow from './ScheduleRow';
+import ClassLevelIcon from './ClassLevelIcon';
 
 const Schedule = (props) => {
 
@@ -45,6 +46,19 @@ const Schedule = (props) => {
             Your timezone is <b>{timezone}</b>
           </Col>
         </Row>
+        <Row>
+          <Col xs={12} className="text-center">
+            &nbsp;
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="text-center">
+            <ClassLevelIcon level="beginner"></ClassLevelIcon> Beginner –
+            <ClassLevelIcon level="intermediate"></ClassLevelIcon> Intermediate –
+            <ClassLevelIcon level="advanced"></ClassLevelIcon> Advanced
+          </Col>
+        </Row>
+
 
         {
           props.schedule.map( ( row, i ) => {
