@@ -114,7 +114,16 @@ const Home = (props) => {
             <Alert variant="secondary">
               <h3>Event staff</h3>
               <ul>
-                <li> Chancellor: Caitriona  of the Ravens</li>
+                <li>Caitriona  of the Ravens</li>
+                <li>THL Maria Harsick</li>
+                <li>Lady Swanhilde von Baerenau</li>
+                <li>Magnifica Magdelena Grace Vane</li>
+                <li>THL Tamara Samuilova</li>
+                <li>Viscount Yannick of Normandy, OP</li>
+                <li>Maestra Ellisif Gydasdottir</li>
+                <li>Noble Henric van den Casteele</li>
+                <li>Lady Alfhild de Foxley</li>
+                <li>Lady Anneleyn Cornelisse</li>
               </ul>
 
             </Alert>
