@@ -103,6 +103,32 @@ const Home = (props) => {
           </Col>
         </Row>
 
+        <br />
+
+        <Row>
+          <Col xs={0} sm={1} xl={2}>
+
+          </Col>
+
+          <Col>
+            <Card body>
+              <div class="text-center">
+                <h3>Feast from the Drachenwald Cookbook</h3>
+                <p>
+                  Saturday will end with a do-it-yourself period feast
+                  with recipes taken from the Drachenwald 30th Year Cookbook
+                </p>
+                <LinkContainer to="/classes/magdelena-grace-vane/second-breakfast-a-feast-for-online-university"><Button variant="primary" className="mx-2"><b>More info</b></Button></LinkContainer>
+                <Button variant="primary" href="https://www.mijnbestseller.nl/site/?r=userwebsite/index&id=Drachenwald-cookbook/bookdetails/302538" className="mx-2"><b>Buy the cookbook</b></Button>
+              </div>
+            </Card>
+          </Col>
+
+          <Col xs={0} sm={1} xl={2}>
+
+          </Col>
+        </Row>
+
 
         <Row>
           <Col xs={0} sm={1} xl={2}>
