@@ -118,7 +118,7 @@ const Home = (props) => {
                   Saturday will end with a do-it-yourself period feast
                   with recipes taken from the Drachenwald 30th Year Cookbook
                 </p>
-                <LinkContainer to="/classes/magdelena-grace-vane/second-breakfast-a-feast-for-online-university"><Button variant="primary" className="mx-2"><b>More info</b></Button></LinkContainer>
+                <LinkContainer to="/classes/magdelena-grace-vane/2nd-breakfast-a-feast-for-online-university"><Button variant="primary" className="mx-2"><b>Feast info</b></Button></LinkContainer>
                 <Button variant="primary" href="https://www.mijnbestseller.nl/site/?r=userwebsite/index&id=Drachenwald-cookbook/bookdetails/302538" className="mx-2"><b>Buy the cookbook</b></Button>
               </div>
             </Card>
