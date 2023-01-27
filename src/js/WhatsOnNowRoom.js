@@ -36,7 +36,7 @@ const WhatsOnNowRoom = (props) => {
           ?
             null
           :
-            <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>Participate</b></Button></LinkContainer>
+            <LinkContainer to={ '/classes/' + onNow.slug}><Button variant="primary"><b>More info</b></Button></LinkContainer>
         }
         
         <br /><br />

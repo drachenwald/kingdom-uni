@@ -96,7 +96,7 @@ function App() {
         .map( row => (
           { title: row.title,
             start: new Date( row.when ),
-            end: new Date( row['end_time'] ),
+            end: new Date( new Date(row.when).getTime() + row['length-in-minutes']*60000 ),
             slug: slugify_class( row.teacher, row.title )
           }
         ))
