@@ -64,6 +64,7 @@ const WhatsOnNowRoom = (props) => {
         :
           <>
             <span className="text-muted">Room has closed</span>
+            <br /><br />
           </>
       }
     </>
