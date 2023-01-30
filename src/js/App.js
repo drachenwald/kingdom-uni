@@ -116,7 +116,10 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
-
+/*** uncomment to enable background refresh
+ * 
+ * 
+ 
   useEffect(() => {
     const schedRefreshInterval = setInterval(() => {
       fetch(scheduleUrl, { cache: 'no-cache' })
@@ -134,7 +137,8 @@ function App() {
     return () => clearInterval(schedRefreshInterval);
     // eslint-disable-next-line
   }, []);
-
+  
+*/
 
   return (
     <>
