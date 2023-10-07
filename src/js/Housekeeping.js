@@ -36,15 +36,18 @@ const Housekeeping = (props) => {
   <li>If you have additional questions, or were not called during the session, there will be a Discord channel for  extra questions. Please add your additional questions to that channel, and keep the discussion going! </li>
 </ul>
 <h2>Code of conduct</h2>
-<p>We observe the SCA Code of Conduct and expect all participants to:</p>
-<ul><li>act in accordance with the chivalric virtues of honor and service;</li>
-<li>value and respect the worth and dignity of all individuals;</li>
-<li>practice inclusiveness and respect pluralism and diversity;</li>
-<li>promote a safe and respectful environment for all SCA events;</li>
-<li>act with transparency, fairness, integrity and honesty;</li>
-<li>be a responsible steward of SCA resources; and,</li>
-<li>be committed to maintaining the trust of its members and participants.</li>
+<p>We observe the SCA Code of Conduct. 
+<br /> We expect all participants to:</p>
+<ul><li>Act in accordance with the chivalric virtues of honor and service.</li>
+<li>Value and respect the worth and dignity of all individuals.</li>
+<li>Practice inclusiveness and respect pluralism and diversity.</li>
+<li>Promote a safe and respectful environment for all SCA events.</li>
+<li>Act with transparency, fairness, integrity and honesty.</li>
+<li>Be a responsible steward of SCA resources.</li>
+<li>Be committed to maintaining the trust of its members and participants.</li>
 </ul>
+	<p> We respectfully request that all participants refrain from raising topics such as politics or religion at the event.</p>	
+
 	<p>Breaches and disruptive behaviour will see offenders removed and the incident reported. We really hope this won’t be necessary.</p>
   <p>We hope Kingdom University  offers the highest hospitality this fair Kingdom can provide online. So, please, maintain honour, respect and decorum and relax into a long weekend of learning and enlightenment!</p>
 <p>All the best from your organising team!</p>
