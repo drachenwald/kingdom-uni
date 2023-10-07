@@ -39,7 +39,7 @@ const Layout = (props) => {
               <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
               <Nav.Item className="bg-drachenwald text-gold text-left">
                 <div style={{width: '145px', textAlign: 'right'}} >
-                  /*<Ticker {...props} />*/
+{/*<Ticker {...props} />*/}
                 </div>
               </Nav.Item>
             </Nav>
@@ -91,12 +91,12 @@ const Layout = (props) => {
               </Navbar.Text>
             </Col>
             <Col xs="auto" className="align-right">
-            /*<img
+                    {/*<img
                   alt=""
                   src={penguin}
                   width="100"
                   className="d-inline-block align-middle"
-                />*/
+                />*/}
             </Col>
           </Row>
         </Container>
