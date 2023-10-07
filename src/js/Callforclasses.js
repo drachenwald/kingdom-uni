@@ -24,7 +24,7 @@ const Callforclasses = (props) => {
   <Alert variant="secondary" >
 
               <p>Dear all, <br />    
-                would like to invite everyone to attend another exciting digital Drachenwald Kingdom University event, 26-28 jan 2024. 
+                We would like to invite everyone to attend another exciting digital Drachenwald Kingdom University event, 26-28 jan 2024. 
           The classes will be a combination of live and recorded classes held on Zoom channels and using a Discord server for chat and socialising during the event. </p>
               <p>Please consider offering a class for this event. Classes can be either designed as live, or as pre-recorded with a Q&A session live during the event.
               </p>
