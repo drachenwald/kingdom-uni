@@ -8,7 +8,7 @@ import heraldry from '../images/uni-chancellor-badge.png';
 import drachenwald_arms from '../images/drachenwald-arms.png';
 //import penguin from '../images/penguin.png';
 
-//import Ticker from './Ticker';
+import Ticker from './Ticker';
 
 const Layout = (props) => {
   return (
@@ -39,7 +39,7 @@ const Layout = (props) => {
               <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
               <Nav.Item className="bg-drachenwald text-gold text-left">
                 <div style={{width: '145px', textAlign: 'right'}} >
-{/*<Ticker {...props} />*/}
+                <Ticker {...props} /> 
                 </div>
               </Nav.Item>
             </Nav>
