@@ -101,29 +101,7 @@ const Home = (props) => {
 
         <br />
 
-        <Row>
-          <Col xs={0} sm={1} xl={2}>
-
-          </Col>
-
-          <Col>
-            <Card body>
-              <div class="text-center">
-                <h3>Feast from the Drachenwald Cookbook</h3>
-                <p>
-                  Saturday will end with a do-it-yourself period feast
-                  with recipes taken from the Drachenwald 30th Year Cookbook
-                </p>
-                <LinkContainer to="/classes/magdelena-grace-vane/2nd-breakfast-a-feast-for-online-university"><Button variant="primary" className="mx-2"><b>Feast info</b></Button></LinkContainer>
-                <Button variant="primary" href="https://www.mijnbestseller.nl/site/?r=userwebsite/index&id=Drachenwald-cookbook/bookdetails/302538" className="mx-2"><b>Buy the cookbook</b></Button>
-              </div>
-            </Card>
-          </Col>
-
-          <Col xs={0} sm={1} xl={2}>
-
-          </Col>
-        </Row>
+        
 
 
         <Row>
@@ -136,16 +114,16 @@ const Home = (props) => {
             <Alert variant="secondary">
               <h3>Event staff</h3>
               <ul>
-                <li>Caitriona  of the Ravens</li>
-                <li>THL Maria Harsick</li>
-                <li>Lady Swanhilde von Baerenau</li>
+                <li>THL Alfhild de Foxley</li>
+                <li>Viscount Yannick of Normandy</li>
                 <li>Magnifica Magdelena Grace Vane</li>
-                <li>THL Tamara Samuilova</li>
-                <li>Viscount Yannick of Normandy, OP</li>
-                <li>Maestra Ellisif Gydasdottir</li>
+                <li>Magistra Ysabella-Maria de San Lazaro</li>
+                <li>Magistra Maria Harsick</li>
+                <li>Captain Wolfram Burkhardt von Falkenstein</li>
                 <li>Noble Henric van den Casteele</li>
-                <li>Lady Alfhild de Foxley</li>
-                <li>Lady Anneleyn Cornelisse</li>
+                <li>Viscountess Caitriona of the Ravens, OP</li>
+                <li>Lady Kytte of the lake</li>
+                
               </ul>
 
             </Alert>
