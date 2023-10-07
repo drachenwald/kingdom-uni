@@ -31,7 +31,7 @@ const Layout = (props) => {
 
 
             <Nav className="ms-auto">
-              <LinkContainer to="https://fienta.com/kingdom-university-online"><Nav.Link className="mx-2">Register</Nav.Link></LinkContainer>
+              <a href="https://fienta.com/kingdom-university-online" class="mx-2 nav-link">Register</a>
               <LinkContainer to="/Callforclasses"><Nav.Link className="mx-2">Call for classes</Nav.Link></LinkContainer>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
