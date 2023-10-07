@@ -13,14 +13,14 @@ import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
-  const firstDay = new Date(2023,0,27);
+  const firstDay = new Date(2024,0,26);
   const today = new Date();
 
   return (
     <>
       <Banner
-        headline="Drachenwald Kingdom University"
-        subhead="Online – 27-29 January 2023"
+        headline="Drachenwald Kingdom University "
+        subhead="Online – 26-28 January 2024"
       />
 
       <Container>
@@ -29,7 +29,7 @@ const Home = (props) => {
           ?
             <p className="text-center">
               Join us for a weekend of online classes from Drachenwald!<br />
-              <strong>27-29 January 2023</strong>
+              <strong>26-28 January 2024</strong>
             </p>
           :
             (
@@ -83,18 +83,14 @@ const Home = (props) => {
           <Col>
              <h3>What’s Kingdom University online all about?</h3>
              
-             <p>Due to Covid 19 the ensuing pandemic and the cancellation of events in 2020 the event staff
-              for Kingdom University decided to tun the event into an online event and offer classes over Zoom.
-              It worked! People enjoyed themselves. It was repeated in 2021 because we were still not having
-              in person events much.</p>
-             
-             <p>In 2022 Kingdom University was able to be held and was enjoyed by all, though those who couldn’t
-              make it asked about hybrid or an online event. I after consultation with some hobbits decided that
-              the people of Drachenwald deserve Second University. So we are bringing you KU Online 2023. </p>
+             <p>Due to Covid 19 the ensuing pandemic and the cancellation of events in 2020 the event staff 
+              for Kingdom University decided to turn the event into an online event and offer classes over Zoom. 
+              It worked! People enjoyed themselves. It was repeated in 2021, 2022 and 2023.
+              </p>
 
              <p>
-             If you have any queries or questions plrase contact the University Chancellor
-             at <a href="mailto:university@drachenwald.sca.org">university@drachenwald.sca.org</a>.
+             If you have any queries or questions plrase contact the Deputy University Chancellor
+             at <a href="mailto:kuonline-deputy@drachenwald.sca.org">kuonline-deputy@drachenwald.sca.org</a>.
              </p>
           </Col>
 
