@@ -33,7 +33,7 @@ const Home = (props) => {
             </p>
           :
             (
-              <WhatsOnNow schedByRoom={props.schedByRoom} />
+              /*<WhatsOnNow schedByRoom={props.schedByRoom} />*/
             )
         }
 
