@@ -6,9 +6,9 @@ import { mdiAlert } from '@mdi/js';
 
 import heraldry from '../images/uni-chancellor-badge.png';
 import drachenwald_arms from '../images/drachenwald-arms.png';
-import penguin from '../images/penguin.png';
+//import penguin from '../images/penguin.png';
 
-import Ticker from './Ticker';
+//import Ticker from './Ticker';
 
 const Layout = (props) => {
   return (
@@ -31,8 +31,8 @@ const Layout = (props) => {
 
 
             <Nav className="ms-auto">
-              <LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
-              <LinkContainer to="/classlist"><Nav.Link className="mx-2">Class list</Nav.Link></LinkContainer>
+              /*<LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
+              <LinkContainer to="/classlist"><Nav.Link className="mx-2">Class list</Nav.Link></LinkContainer>*/
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
