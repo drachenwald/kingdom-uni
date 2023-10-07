@@ -43,21 +43,21 @@ const Home = (props) => {
             <Card>
               <Card.Img variant="top" src={goldwork} />
               <Card.Body>
-                <Card.Title>Schedule</Card.Title>
+                <Card.Title>Registration</Card.Title>
                 <Card.Text>
-                  See the programme of classes and workshops.
+                  Sign up to attend Kingdom University online.
                 </Card.Text>
-                <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
+                <Button variant="primary" href="https://fienta.com/kingdom-university-online"><b>Register</b></Button>
               </Card.Body>
             </Card>
             <Card>
               <Card.Img variant="top" src={register} />
               <Card.Body>
-                <Card.Title>Registration</Card.Title>
+                <Card.Title>Call for Classes</Card.Title>
                 <Card.Text>
-                  If you haven't preregistered, email the University Chancellor to get access.
+               &nbsp;
                 </Card.Text>
-                <Button variant="primary" href="mailto:university@drachenwald.sca.org"><b>Email the Chancellor</b></Button>
+                <LinkContainer to="/Callforclasses"><Button variant="primary"><b>Submit a class</b></Button></LinkContainer>
               </Card.Body>
             </Card>
             <Card>
