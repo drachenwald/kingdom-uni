@@ -28,7 +28,7 @@ const Callforclasses = (props) => {
           The classes will be a combination of live and recorded classes held on Zoom channels and using a Discord server for chat and socialising during the event. </p>
               <p>Please consider offering a class for this event. Classes can be either designed as live, or as pre-recorded with a Q&A session live during the event.
               </p>
-              
+              <p><strong>Deadline: Please submit all classes by 15 January 2024.</strong></p>
               <p><Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd6H5DKheYp-umZ7iffoEokFFXeW4cHU8ZGQExqwv9jFQ357g/viewform?fbclid=IwAR3E2IxvqiKLjFZJBG-6lsSVCM7Gawj1qy35DfTfdWaPTZ2iNCoBDRxvFYc">
           <b>Submit a class</b></Button>
               </p>
