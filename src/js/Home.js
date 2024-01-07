@@ -92,6 +92,8 @@ const Home = (props) => {
              If you have any queries or questions plrase contact the Deputy University Chancellor
              at <a href="mailto:kuonline-deputy@drachenwald.sca.org">kuonline-deputy@drachenwald.sca.org</a>.
              </p>
+
+               <p><a href="https://discord.gg/ytsq2Bs3B8">Join us on discord</a> for discussion and handout links.</p>
           </Col>
 
           <Col xs={0} sm={1} xl={2}>
