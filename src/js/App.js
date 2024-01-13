@@ -22,7 +22,7 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'The Shire - Lobby', 'Rivendell', 'Helm\'s Deep', 'Gondor', 'Fangorn Forest', 'Mordor', 'Mines of Moria' ]
+  const roomnames = [ 'Mos Eisley Cantina', 'Alderaan', 'Coruscant', 'Dantooine', 'Endor', 'Geonosis', 'Hoth', 'Kamino', 'Tatooine' ]
 
   const scheduleUrl = 'https://dis.drachenwald.sca.org/data/ku.json';
 
