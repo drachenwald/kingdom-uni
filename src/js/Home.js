@@ -89,7 +89,7 @@ const Home = (props) => {
               </p>
 
              <p>
-             If you have any queries or questions plrase contact the Deputy University Chancellor
+             If you have any queries or questions please contact the Deputy University Chancellor
              at <a href="mailto:kuonline-deputy@drachenwald.sca.org">kuonline-deputy@drachenwald.sca.org</a>.
              </p>
 
