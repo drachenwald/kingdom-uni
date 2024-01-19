@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 //import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
-//import WhatsOnNow from './WhatsOnNow';
+import WhatsOnNow from './WhatsOnNow';
 
 import register from '../images/cards/register.jpg';
 import goldwork from '../images/cards/goldwork.jpg';
@@ -33,7 +33,7 @@ const Home = (props) => {
             </p>
           :
             (
-              {/*<WhatsOnNow schedByRoom={props.schedByRoom} />*/}
+              <WhatsOnNow schedByRoom={props.schedByRoom} />
             )
         }
 
