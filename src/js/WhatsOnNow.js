@@ -24,25 +24,31 @@ const WhatsOnNow = (props) => {
       </Row>
       <Row>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="The Shire - Lobby" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Mos Eisley Cantina" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Rivendell" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Alderaan" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Helm's Deep" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Coruscant" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Gondor" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Dantooine" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Fangorn Forest" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Endor" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Mordor" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Geonosis" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Mines of Moria" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Hoth" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+<Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Kamino" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+<Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Tatooine" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
       </Row>
       <Row>
