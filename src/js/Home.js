@@ -94,7 +94,7 @@ const Home = (props) => {
              </p>
 
                <p><a href="https://discord.gg/ytsq2Bs3B8">Join us on discord</a> for discussion and handout links.</p>
-               <p>Join us at the star feast on Saturday! <a href="https://docs.google.com/presentation/d/1kZziOLdDLlaWak5m1uHwgz8UTJw7Y-ay0fHIYdQ5VjY/edit?fbclid=IwAR1AFI_TDdsKAz3gqnhtW2W7_RhdEQH7zGZKWFTrkI8W3y9aKNIjIny6QTM#slide=id.g29d4e9ab899_0_5">View recipes.</a> </p>
+               <p>Join us at the star feast on Saturday! <a href="https://bit.ly/KUonline2024-feast">View recipes.</a> </p>
           </Col>
 
           <Col xs={0} sm={1} xl={2}>
