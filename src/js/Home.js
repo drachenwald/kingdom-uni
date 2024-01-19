@@ -13,7 +13,7 @@ import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
-  const firstDay = new Date(2024,0,19);
+  const firstDay = new Date(2024,0,26);
   const today = new Date();
 
   return (
