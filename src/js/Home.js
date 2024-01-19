@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Button, Alert, Card, CardGroup } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-//import Icon from '@mdi/react';
-//import { mdiYoutube } from '@mdi/js';
+import Icon from '@mdi/react';
+import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
 import WhatsOnNow from './WhatsOnNow';
