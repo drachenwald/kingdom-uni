@@ -48,7 +48,7 @@ const Layout = (props) => {
         </Container>
       </Navbar>
 
-{/*
+
       { props.flashmsg
         ?
           <div className="bg-warning" style={{'background-color': '#ffff00'}}>
@@ -62,7 +62,7 @@ const Layout = (props) => {
         :
           null
       }
-*/}
+
 
       { props.children }
 
