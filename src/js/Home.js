@@ -28,7 +28,7 @@ const Home = (props) => {
           <div role="alert" class="fade alert alert-primary show">
           <h2>Our online Kingdom University 2024 is now closed</h2>
           <p>A huge thank you to all teachers and attendees for making this such a wonderful event.  We love you all!</p>
-          <p>The university chancellor and their deputy will be starting to plot <ahem> set things up for  online Kingdom University 2025, in Summer/Autumn 2024. </p>
+          <p>The university chancellor and their deputy will be starting to plot (ahem) set things up for  online Kingdom University 2025, in Summer/Autumn 2024. </p>
           <p><strong>Watch this space!</strong></p></div>
 
 
