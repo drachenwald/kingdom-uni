@@ -13,31 +13,23 @@ import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
-  const firstDay = new Date(2024,0,26);
+  const firstDay = new Date(2025,0,24);
   const today = new Date();
 
   return (
     <>
       <Banner
         headline="Drachenwald Kingdom University "
-        subhead="Online – 26-28 January 2024"
+        subhead="Online – 24-26 January 2025"
       />
 
       <Container>
 
-          <div role="alert" class="fade alert alert-primary show">
-          <h2>Our online Kingdom University 2024 is now closed</h2>
-          <p>A huge thank you to all teachers and attendees for making this such a wonderful event.  We love you all!</p>
-          <p>The university chancellor and their deputy will be starting to plot (ahem) set things up for  online Kingdom University 2025, in Summer/Autumn 2024. </p>
-          <p><strong>Watch this space!</strong></p></div>
-
-
-        {/*         commented out until sept/oct 2024
         { today < firstDay
           ?
             <p className="text-center">
               Join us for a weekend of online classes from Drachenwald!<br />
-              <strong>26-28 January 2024</strong>
+              <strong>24-26 January 2025</strong>
             </p>
           :
             (
@@ -55,17 +47,17 @@ const Home = (props) => {
                 <Card.Text>
                   Sign up to attend Kingdom University online.
                 </Card.Text>
-                <Button variant="primary" href="https://fienta.com/kingdom-university-online"><b>Register</b></Button>
+                <Button variant="primary" href="https://fienta.com/kingdom-university-online-105765"><b>Register to attend</b></Button>
               </Card.Body>
             </Card>
             <Card>
               <Card.Img variant="top" src={register} />
               <Card.Body>
-                <Card.Title>Class Schedule</Card.Title>
+                <Card.Title>Teach a class</Card.Title>
                 <Card.Text>
-               &nbsp;
+                  Would you like to present a class or run a workshop?
                 </Card.Text>
-                <LinkContainer to="/Schedule"><Button variant="primary"><b>View schedule</b></Button></LinkContainer>
+                <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_-NP0T56zQoylQQIFSU8Loj3CgDOW7Hnb2pAejAw4TUS5AQ/viewform?pli=1"><b>Sign up to teach</b></Button>
               </Card.Body>
             </Card>
             <Card>
@@ -80,7 +72,7 @@ const Home = (props) => {
             </Card>
           </CardGroup>
         }
-end of comment out */}
+
         <br />
         <br />
         <Row>
@@ -93,7 +85,7 @@ end of comment out */}
              
              <p>Due to Covid 19 the ensuing pandemic and the cancellation of events in 2020 the event staff 
               for Kingdom University decided to turn the event into an online event and offer classes over Zoom. 
-              It worked! People enjoyed themselves. It was repeated in 2021, 2022 and 2023.
+              It worked! People enjoyed themselves. It has been repeated annually since.
               </p>
 
              <p>
@@ -102,7 +94,6 @@ end of comment out */}
              </p>
 
                <p><a href="https://discord.gg/ytsq2Bs3B8">Join us on discord</a> for discussion and handout links.</p>
-               <p>Join us at the star feast on Saturday! <a href="https://bit.ly/KUonline2024-feast">View recipes.</a> </p>
           </Col>
 
           <Col xs={0} sm={1} xl={2}>
@@ -112,38 +103,6 @@ end of comment out */}
 
         <br />
 
-        
-
-
-        <Row>
-          <Col xs={0} sm={1} xl={2}>
-
-          </Col>
-
-          <Col>
-            <br />
-            <Alert variant="secondary">
-              <h3>2024 Event staff</h3>
-              <ul>
-                <li>THL Alfhild de Foxley</li>
-                <li>Viscount Yannick of Normandy</li>
-                <li>Magnifica Magdelena Grace Vane</li>
-                <li>Magistra Ysabella-Maria de San Lazaro</li>
-                <li>Magistra Maria Harsick</li>
-                <li>Captain Wolfram Burkhardt von Falkenstein</li>
-                <li>Noble Henric van den Casteele</li>
-                <li>Viscountess Caitriona of the Ravens, OP</li>
-                <li>Lady Kytte of the lake</li>
-                
-              </ul>
-
-            </Alert>
-          </Col>
-
-          <Col xs={0} sm={1} xl={2}>
-
-          </Col>
-        </Row>
 
       </Container>
     </>
