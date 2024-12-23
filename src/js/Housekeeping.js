@@ -53,7 +53,7 @@ const Housekeeping = (props) => {
 <p>All the best from your organising team!</p>
 
             <p>
-              <LinkContainer to="/schedule"><Button variant="primary"><b>View schedule</b></Button></LinkContainer>
+              <LinkContainer to="/"><Button variant="primary"><b>Home</b></Button></LinkContainer>
             </p>
           </Col>
 
