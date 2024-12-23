@@ -22,7 +22,7 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'Mos Eisley Cantina', 'Alderaan', 'Coruscant', 'Dantooine' ]
+  const roomnames = [ 'Gallifrey', 'Exxilon', 'Halcya', 'Karn', 'Mira', 'Nooma', 'Oberon', 'Ribos', 'Shada', 'The Library' ]
 
   const scheduleUrl = 'https://dis.drachenwald.sca.org/data/ku.json';
 
