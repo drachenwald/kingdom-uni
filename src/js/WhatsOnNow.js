@@ -23,14 +23,17 @@ const WhatsOnNow = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={3}>
           <WhatsOnNowRoom room="Gallifrey" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={3}>
           <WhatsOnNowRoom room="Exxilon" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={3}>
           <WhatsOnNowRoom room="Halcya" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Karn" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
        
       </Row>
