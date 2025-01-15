@@ -53,11 +53,11 @@ const Home = (props) => {
             <Card>
               <Card.Img variant="top" src={register} />
               <Card.Body>
-                <Card.Title>Teach a class</Card.Title>
+                <Card.Title>Schedule</Card.Title>
                 <Card.Text>
-                  Would you like to present a class or run a workshop?
+                  See the classes that are taking place
                 </Card.Text>
-                <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_-NP0T56zQoylQQIFSU8Loj3CgDOW7Hnb2pAejAw4TUS5AQ/viewform?pli=1"><b>Sign up to teach</b></Button>
+                <LinkContainer to="/schedule"><Button variant="primary"><b>View the schedule</b></Button></LinkContainer>
               </Card.Body>
             </Card>
             <Card>
