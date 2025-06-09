@@ -53,9 +53,9 @@ const Home = (props) => {
               <Card.Body>
                 <Card.Title>Teach</Card.Title>
                 <Card.Text>
-                  Apply to present a class at the event
+                  Apply to present a class or activity at the event.
                 </Card.Text>
-                <Button variant="primary" disabled><b>Coming soon</b></Button>
+                <Button variant="primary" href="https://docs.google.com/forms/d/1hm9bwHzKm4tpBVBHCOvd9qDNqEeh3EwkyYHvdUq5l08/viewform?edit_requested=true"><b>Propose a class</b></Button>
               </Card.Body>
             </Card>
             <Card>
@@ -63,7 +63,7 @@ const Home = (props) => {
               <Card.Body>
                 <Card.Title>Housekeeping</Card.Title>
                 <Card.Text>
-                  Guidelines for online conduct of teachers, assistants and attendees
+                  Guidelines for online conduct of teachers, assistants and attendees.
                 </Card.Text>
                 <LinkContainer to="/housekeeping"><Button variant="primary"><b>Read about conduct</b></Button></LinkContainer>
               </Card.Body>
