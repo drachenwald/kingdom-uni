@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Button, Alert, Card, CardGroup } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, CardGroup } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import Icon from '@mdi/react';
-import { mdiYoutube } from '@mdi/js';
 
 import Banner from './Banner';
 import WhatsOnNow from './WhatsOnNow';
@@ -13,14 +11,14 @@ import food from '../images/cards/sublety.jpg';
 
 const Home = (props) => {
 
-  const firstDay = new Date(2025,0,24);
+  const firstDay = new Date(2026,1,6);
   const today = new Date();
 
   return (
     <>
       <Banner
         headline="Drachenwald Kingdom University "
-        subhead="Online – 24-26 January 2025"
+        subhead="Online – 6-8 February 2026"
       />
 
       <Container>
@@ -29,7 +27,7 @@ const Home = (props) => {
           ?
             <p className="text-center">
               Join us for a weekend of online classes from Drachenwald!<br />
-              <strong>24-26 January 2025</strong>
+              <strong>6-8 February 2026</strong>
             </p>
           :
             (
@@ -47,17 +45,17 @@ const Home = (props) => {
                 <Card.Text>
                   Sign up to attend Kingdom University online.
                 </Card.Text>
-                <Button variant="primary" href="https://fienta.com/kingdom-university-online-105765"><b>Register to attend</b></Button>
+                <Button variant="primary" href="https://fienta.com/kingdom-university-online-132118"><b>Register to attend</b></Button>
               </Card.Body>
             </Card>
             <Card>
               <Card.Img variant="top" src={register} />
               <Card.Body>
-                <Card.Title>Schedule</Card.Title>
+                <Card.Title>Teach</Card.Title>
                 <Card.Text>
-                  See the classes that are taking place
+                  Apply to present a class at the event
                 </Card.Text>
-                <LinkContainer to="/schedule"><Button variant="primary"><b>View the schedule</b></Button></LinkContainer>
+                <Button variant="primary" disabled><b>Coming soon</b></Button>
               </Card.Body>
             </Card>
             <Card>

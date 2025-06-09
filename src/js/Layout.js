@@ -32,9 +32,8 @@ const Layout = (props) => {
 
             <Nav className="ms-auto">
               
-              <Nav.Link href="https://fienta.com/kingdom-university-online-105765" className="mx-2">Attend</Nav.Link>
+              <Nav.Link href="https://fienta.com/kingdom-university-online-132118" className="mx-2">Attend</Nav.Link>
               <LinkContainer to="/housekeeping"><Nav.Link className="mx-2">Housekeeping</Nav.Link></LinkContainer>
-              <LinkContainer to="/schedule"><Nav.Link className="mx-2">Schedule</Nav.Link></LinkContainer>
             </Nav>
             <Nav>
               <Nav.Item>&nbsp;&nbsp;&nbsp;</Nav.Item>
