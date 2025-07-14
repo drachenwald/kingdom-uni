@@ -55,7 +55,7 @@ const Home = (props) => {
                 <Card.Text>
                   Apply to present a class or activity at the event.
                 </Card.Text>
-                <Button variant="primary" href="https://docs.google.com/forms/d/1hm9bwHzKm4tpBVBHCOvd9qDNqEeh3EwkyYHvdUq5l08/viewform?edit_requested=true"><b>Propose a class</b></Button>
+                <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLScrnJYTwTwlMP_KMncCCMdRKEZGGY87WtpA48WFad6PbJig3Q/viewform"><b>Propose a class</b></Button>
               </Card.Body>
             </Card>
             <Card>
