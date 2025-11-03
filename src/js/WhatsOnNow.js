@@ -24,16 +24,16 @@ const WhatsOnNow = (props) => {
       </Row>
       <Row>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Gallifrey" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="The Mended Drum" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Exxilon" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Ankh Morpork" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Halcya" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Lancre" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
         <Col xs={12} md={3}>
-          <WhatsOnNowRoom room="Karn" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+          <WhatsOnNowRoom room="Klatch" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
        
       </Row>
