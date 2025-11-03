@@ -22,7 +22,7 @@ function App() {
     'nickname': 'Event time',
   }
 
-  const roomnames = [ 'The Mended Drum', 'Ankx Morpork', 'Lancre', 'Klatch', 'Sto Lat', 'Genua', 'Quirm' ]
+  const roomnames = [ 'The Mended Drum', 'Ankh Morpork', 'Lancre', 'Klatch', 'Sto Lat', 'Genua', 'Quirm' ]
 
   const scheduleUrl = 'https://dis.drachenwald.sca.org/data/ku.json';
 
