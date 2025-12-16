@@ -26,8 +26,9 @@ const Home = (props) => {
         { today < firstDay
           ?
             <p className="text-center">
-              Join us for a weekend of online classes from Drachenwald!<br />
-              <strong>6-8 February 2026</strong>
+              This year we are collaborating with Atlantia and Lochac to do a
+              27 hour university.<br />
+              <Button variant="primary" href="https://sites.google.com/drachenwald.sca.org/tri-kingdom-university"><b>Visit our joint website</b></Button>
             </p>
           :
             (
