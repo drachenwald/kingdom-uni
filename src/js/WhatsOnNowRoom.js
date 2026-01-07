@@ -46,7 +46,7 @@ const WhatsOnNowRoom = (props) => {
   }
 
   const onNext = onNow = props.schedByRoom[props.room]
-    .find( row => ( row.start > nowish && row.title.indexOf("**CANCELLED**") === -1 ));
+    .find( row => ( row.start > nowish && row.title.indexOf("CANCELLED") === -1 ));
 
   return (
     <>
@@ -56,7 +56,7 @@ const WhatsOnNowRoom = (props) => {
         ?
           <>
             <span className="text-muted">
-              <small>Coming up at {onNext.start.toLocaleTimeString( [], { hour: '2-digit', minute: '2-digit' } )}</small><br />
+              <small>Coming up {onNext.start.toLocaleTimeString( [], { weekday: 'short', hour: '2-digit', minute: '2-digit' } )}</small><br />
               {onNext.title}
             </span>
             <br /><br />
