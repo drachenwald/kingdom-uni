@@ -23,19 +23,36 @@ const WhatsOnNow = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="The Mended Drum" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Ankh Morpork" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Lancre" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Klatch" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-       
+        <Col xs={12} md={4}>
+          <WhatsOnNowRoom room="Sto Lat" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={4}>
+          <WhatsOnNowRoom room="Genua" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Quirm" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Unseen University" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={3}>
+          <WhatsOnNowRoom room="The Chalk" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
+        <Col xs={12} md={3}>
+          <WhatsOnNowRoom room="Sto Helit" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
+        </Col>
       </Row>
       <Row>
         <Col>
