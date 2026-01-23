@@ -21,15 +21,17 @@ const Home = (props) => {
         subhead="Online – 6-8 February 2026"
       />
 
+      <p className="text-center">
+          This year we are collaborating with Atlantia and Lochac to run a
+          27 hour university.<br />
+          <Button variant="primary my-2" href="https://sites.google.com/drachenwald.sca.org/tri-kingdom-university"><b>Visit our joint website</b></Button>
+      </p>
+
       <Container>
 
         { today < firstDay
           ?
-            <p className="text-center">
-              This year we are collaborating with Atlantia and Lochac to do a
-              27 hour university.<br />
-              <Button variant="primary" href="https://sites.google.com/drachenwald.sca.org/tri-kingdom-university"><b>Visit our joint website</b></Button>
-            </p>
+            null
           :
             (
               <WhatsOnNow schedByRoom={props.schedByRoom} />
@@ -52,11 +54,11 @@ const Home = (props) => {
             <Card>
               <Card.Img variant="top" src={register} />
               <Card.Body>
-                <Card.Title>Teach</Card.Title>
+                <Card.Title>Schedule</Card.Title>
                 <Card.Text>
-                  Apply to present a class or activity at the event.
+                  Plan the classes you'd like to attend.
                 </Card.Text>
-                <Button variant="primary" href="https://docs.google.com/forms/d/e/1FAIpQLScrnJYTwTwlMP_KMncCCMdRKEZGGY87WtpA48WFad6PbJig3Q/viewform"><b>Propose a class</b></Button>
+                <LinkContainer to="/schedule"><Button variant="primary"><b>See the schedule</b></Button></LinkContainer>
               </Card.Body>
             </Card>
             <Card>
