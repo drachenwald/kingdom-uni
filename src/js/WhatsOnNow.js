@@ -41,22 +41,21 @@ const WhatsOnNow = (props) => {
         <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Genua" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Quirm" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Unseen University" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="The Chalk" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={0} md={4}>
+        </Col>
+        <Col xs={12} md={4}>
           <WhatsOnNowRoom room="Sto Helit" schedByRoom={props.schedByRoom} now={now} mutebutton={props.mutebutton} />
         </Col>
-      </Row>
-      <Row>
-        <Col>
-          <br />
+        <Col xs={0} md={4}>
         </Col>
       </Row>
       
